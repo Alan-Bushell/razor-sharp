@@ -6,6 +6,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     height: calc(100vh - 164px);
     width: 100%;
+    background: url('/media/hero-image1.jpg') no-repeat center top fixed;
 }
 
 .nav-bg-color{
@@ -17,7 +18,7 @@ body {
 }
 
 .my-secondary {
-    color: #0fbdad;
+    background-color: #0fbdad;
 }
 
 .my-button {
@@ -26,6 +27,64 @@ body {
 
 .navbar{
     padding: 0;
+}
+
+.second-nav {
+    padding: 0;
+    background-color:#0e6967;
+    min-width: 100%;
+}
+
+.fas{
+    color: white;
+}
+
+button.navbar-toggler{
+    border: solid 2px white !important;
+    margin-left: 5px;
+}
+
+
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: #fd473b;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: white;
+    color: #fd473b;
+}
+
+.hero-row{
+    margin-top: 60px;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 40%;
+    height: 40%;
+}
+
+h1{
+    font-size: 28px;
+    color: white;
+    margin-top: 15px;
 }
 
 
