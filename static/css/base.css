@@ -1,0 +1,53 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    height: calc(100vh - 164px);
+    width: 100%;
+}
+
+.nav-bg-color{
+    background-color: #0e6967;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.my-secondary {
+    color: #0fbdad;
+}
+
+.my-button {
+    color: #fd473b;
+}
+
+.navbar{
+    padding: 0;
+}
+
+
+
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 164px;
+      }
+  }
+  
