@@ -4,9 +4,6 @@ html {
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    height: calc(100vh - 164px);
-    width: 100%;
-    background: url('/media/hero-image1.jpg') no-repeat center top fixed;
 }
 
 .nav-bg-color{
@@ -44,8 +41,6 @@ button.navbar-toggler{
     margin-left: 5px;
 }
 
-
-
 .main-logo-link {
     width: fit-content;
 }
@@ -64,11 +59,17 @@ button.navbar-toggler{
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
     background: white;
     color: #fd473b;
+}
+
+.hero-image{
+    background: url('/media/hero-image1.jpg') no-repeat center top fixed;
+    height: 380px;
+    min-width: 100%;
 }
 
 .hero-row{
@@ -76,18 +77,56 @@ button.navbar-toggler{
 }
 
 .overlay{
-    background-color: rgba(14, 105, 103, 0.5);
-    width: 40%;
-    height: 40%;
+    background-color: rgba(14, 105, 103, 0.6);
     border-radius: 5px;
+    text-align: center;
+    padding: 20px;
 }
 
-h1{
+.row-overlay{
+    height: inherit;
+}
+
+.overlay-message{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 26px;
+    
+}
+
+.cta-h1{
     font-size: 28px;
     color: white;
     margin-top: 15px;
 }
 
+.col-h2{
+    border: solid red 2px;
+}
+
+.row-h2{
+    border: solid green 2px;
+}
+
+
+.cont{
+    height: 120px;
+    background-color: #0e6967;
+}
+
+.div-row{
+    border: solid red 2px;
+    height: inherit;
+}
+
+.div-col{
+    border: solid black 2px;
+}
+
+/* Media Queries */
 
 
 @media (min-width: 1200px) {
@@ -107,7 +146,7 @@ h1{
       }
   
       .header-container {
-          padding-top: 164px;
+          padding-top: 150px;
       }
   }
   

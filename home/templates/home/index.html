@@ -10,18 +10,33 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row hero-row">
-            <div class="col-7 col-md-6 my-auto overlay">
-                <h1 class="logo-font text-black">
-                    Welcome to Razor Sharp
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Begin Shopping</a>
-                    </h4>
+<!--Hero image with CTAoverlay-->
+    <div class="hero-image container">
+        <div class="row row-overlay">
+            <div class="col-12 overlay-message">
+                <div class="overlay">
+                    <h1 class="cta-h1">Welcome to Razor Sharp</h1>
+                    <h2 class="cta-h2">Men's Grooming & Hair needs</h2>
+                    <button type="button" class="btn shop-now-button btn-white">Shop Now</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--Dividing section-->
+    <div class="container-fluid cont">
+        <div class="row div-row">
+            <div class="col-sm-12 col-lg-4 div-col">
+
+            </div>
+            <div class="col-sm-12 col-lg-4 div-col">
+                <h3>What we do</h3>
+                <p>Random text to go below paragraph</p>
+            </div>
+            <div class="col-sm-12 col-lg-4 div-col">
+
+            </div>
+        </div>
+    </div>
+    
 {% endblock %}
