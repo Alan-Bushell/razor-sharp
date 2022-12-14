@@ -112,9 +112,10 @@ button.navbar-toggler{
 }
 
 
-.cont{
+.features-cont{
     height: 120px;
     background-color: #0e6967;
+    margin-bottom: 60px;
 }
 
 .div-row{
@@ -124,7 +125,13 @@ button.navbar-toggler{
 .div-col{
     text-align: center;
     color: white;
+    border-bottom: solid white 1px;
     background-color: #0e6967;
+}
+
+.feat-icon{
+    font-size: 24px;
+    margin-top: 10px;
 }
 
 /* Media Queries */
