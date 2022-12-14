@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'home'
+    'home',
+    'products',
+    'accounts',
+
 ]
 
 MIDDLEWARE = [
@@ -98,6 +101,8 @@ LOGIN_REDIRECT_URL = '/'
 
 
 WSGI_APPLICATION = 'razor_sharp.wsgi.application'
+
+AUTH_USER_MODEL = 'accounts.Account'
 
 
 # Database
