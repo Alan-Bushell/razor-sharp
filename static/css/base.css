@@ -118,12 +118,13 @@ button.navbar-toggler{
 }
 
 .div-row{
-    border: solid red 2px;
     height: inherit;
 }
 
 .div-col{
-    border: solid black 2px;
+    text-align: center;
+    color: white;
+    background-color: #0e6967;
 }
 
 /* Media Queries */
