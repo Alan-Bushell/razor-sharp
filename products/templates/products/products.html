@@ -2,7 +2,22 @@
 {% load static %}
 
 {% block content %}
+<div class="container products-page">
+    <div class="row">
+        <div class="col">
+            <div class="heading">
+                <h2>Products Page</h2>
 
-<h2>Products Page</h2>
+                {% for product in products %}
+                <h4>{{ product.product_name }}</h4> | {{product.price}}| {{product.in_stock}}
+                | {{product.category}}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 {% endblock %}

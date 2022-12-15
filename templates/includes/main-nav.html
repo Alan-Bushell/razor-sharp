@@ -1,12 +1,12 @@
 <div class="collapse navbar-collapse nav-bg-color" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="home-link">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}" id="products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}" id="products-link">
                 Products
             </a>
         </li>

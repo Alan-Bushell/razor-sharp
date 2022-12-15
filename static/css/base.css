@@ -139,6 +139,11 @@ button.navbar-toggler{
     background-color: #0e6967;
     color: white;
     text-align: center;
+    width: 100%;
+}
+
+.heading{
+    margin-bottom: 200px;
 }
 
 .footer-row{
@@ -151,6 +156,12 @@ button.navbar-toggler{
 
 li{
     list-style-type: none;
+}
+
+/* Products Page */
+
+.products-page{
+    margin-top: 180px;
 }
 
 /* Media Queries */
@@ -176,4 +187,49 @@ li{
           padding-top: 150px;
       }
   }
+
+  @media only screen and (max-width: 480px){
+	/*Small smartphones [325px -> 425px]*/
+    .mobile-responsive{
+        font-size: 12.5px;
+    }
+
+    .nav-link{
+        padding: 2.5px;
+    }
+
+    .navbar-toggler{
+        padding: 2.5px;
+    }
+
+    .logo-font{
+        font-size: 12.5px;
+    }
+
+    .cta-h1{
+        font-size: 15px;
+    }
+
+    .cta-h2{
+        font-size: 12.5px;
+    }
+
+    .overlay{
+        padding: 0;
+        padding-bottom: 5px;
+    }
+
+    .shop-now-button{
+        padding: 0;
+        margin: 0;
+    }
+
+    #articles-container{
+        margin-top: 400px;
+    }
+
+    .card{
+        margin-bottom: 30px;
+    }
+}
   
