@@ -35,9 +35,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.product_name
-
-    def check_stock(self):
-        if stock >= 1:
-            in_stock = True
-        else:
-            in_stock = False
