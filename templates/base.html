@@ -73,11 +73,14 @@
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if user.is_authenticated %}
-                                {% if user.is_superuser %}
-                                    <a href="{% url 'admin:index' %}" class="dropdown-item">Product Management</a>
+                            {% if request.user.is_authenticated %}
+                                {% if user.is_superadmin %}
+                                    <a href="{% url 'admin:index' %}" class="dropdown-item">Admin Panel</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
+                                {% if user.is_staff %}
+                                    <a href="" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -135,7 +138,7 @@
         <div class="container">
             <div class="row footer-row">
                 <div class="col-xs-12 col-lg-4">
-                    <h4 class="footer-heading"><strong><u>About</u></strong></h4>
+                    <h4 class="footer-heading"><strong>About</strong></h4>
                     <ul class="about-list">
                         <li>The formation of <strong>Razor</strong> Sharp</li>
                         <li>Who we are</li>
