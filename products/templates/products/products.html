@@ -10,7 +10,9 @@
         {% for product in products %}
         <div class="card-deck col col-xs-12 col-sm-6 col-md-4 col-xl-3 mb-5">
             <div class="card align-items-stretch">
-                <img class="card-img-top product-image" src="{{ product.image_url }}" alt="Card image cap">
+                <a href="{{ product.get_url}}" class="product-image">
+                    <img class="card-img-top product-image" src="{{ product.image_url }}" alt="Card image cap">
+                </a>
                 <div class="card-body">
                     <a href="{{ product.get_url}}">
                         <h5 class="card-title">{{ product.product_name }}</h5>
