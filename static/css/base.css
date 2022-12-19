@@ -165,10 +165,6 @@ li{
 
 /* Products Page */
 
-.products-page, .accounts-page{
-    margin-top: 180px;
-}
-
 .product-image{
     height: 150px;
     width: 150px;
@@ -201,15 +197,10 @@ li{
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {
-          position: fixed;
           top: 0;
           right: 0;
           left: 0;
           z-index: 1030;
-      }
-  
-      .header-container {
-          padding-top: 150px;
       }
   }
 

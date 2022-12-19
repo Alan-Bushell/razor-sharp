@@ -10,7 +10,9 @@
             <div class="card align-items-stretch">
                 <img class="card-img-top product-image" src="{{ product.image_url }}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">{{ product.product_name }}</h5>
+                    <a href="{% url 'product_detail' product.id %}">
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                    </a>
                     <p class="text-muted"><strong>Category: </strong>{{ product.category }}</p>
                     <small class="text-muted">
                         <strong>
