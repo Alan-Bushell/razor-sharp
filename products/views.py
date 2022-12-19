@@ -25,10 +25,13 @@ def products(request, category_slug=None):
     return render(request, 'products/products.html', context)
 
 
-def product_detail(request, product_id):
+def product_detail(request, category_slug, product_slug):
     """ A view to show individual product details """
-
-    product = get_object_or_404(Product, pk=product_id)
+    try:
+        product = Product.objects.get(category__slug=category_slug,
+                                      slug=product_slug)
+    except Exception as e:
+        raise e
 
     context = {
         'product': product,
