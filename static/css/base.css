@@ -165,10 +165,30 @@ li{
 
 /* Products Page */
 
-.products-page{
+.products-page, .accounts-page{
     margin-top: 180px;
 }
 
+.product-image{
+    height: 150px;
+    width: 150px;
+    align-self: center;
+}
+
+
+
+.product-row{
+    justify-content: center;
+    align-content: center;
+}
+
+.products-page{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card-footer{
+    text-align: center;
+}
 /* Media Queries */
 
 
