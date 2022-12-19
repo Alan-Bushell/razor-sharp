@@ -6,9 +6,15 @@
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}" id="products-link">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Products
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="contact-link">
+                {% for category in menu %}
+                    <a href="{{ category.get_url }}" class="dropdown-item">{{category.name}}</a>
+                {% endfor %}
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+            </div>
         </li>
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="subscriptions-link">

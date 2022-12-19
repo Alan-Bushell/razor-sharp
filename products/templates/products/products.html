@@ -4,6 +4,8 @@
 {% block content %}
 <div class="container-fluid products-page">
     <h2 class="text-center">Products Page</h2>
+    <small class="text-muted">{{ product_count }} items found</small>
+    <hr>
     <div class="row product-row">
         {% for product in products %}
         <div class="card-deck col col-xs-12 col-sm-6 col-md-4 col-xl-3 mb-5">
