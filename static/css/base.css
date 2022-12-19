@@ -193,6 +193,11 @@ li{
     padding-top: 30px;
 }
 
+.product-detail-image{
+    height: 225px;
+    width: 225px;
+}
+
 .product-detail-left{
     text-align: center;
 }
@@ -207,6 +212,13 @@ li{
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
+    }
+  }
+
+
+  @media only screen and (max-width: 765px){
+    .product-detail-right{
+        text-align: center;
     }
   }
   
@@ -262,6 +274,10 @@ li{
 
     .card{
         margin-bottom: 30px;
+    }
+
+    .add-cart-btn{
+        margin-bottom: 15px;
     }
 }
   
