@@ -171,8 +171,6 @@ li{
     align-self: center;
 }
 
-
-
 .product-row{
     justify-content: center;
     align-content: center;
@@ -185,6 +183,24 @@ li{
 .card-footer{
     text-align: center;
 }
+
+/* product details page */
+
+.product-detail-container{
+    min-height: 500px;
+    border: solid black 2px;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.product-detail-left{
+    text-align: center;
+}
+
+.add-cart-btn{
+    margin-top: 30px;
+}
+
 /* Media Queries */
 
 
