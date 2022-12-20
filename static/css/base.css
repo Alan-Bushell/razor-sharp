@@ -206,6 +206,17 @@ li{
     margin-top: 30px;
 }
 
+/* Cart Page */
+
+.cart-left{
+    border: solid 2px red;
+}
+
+.cart-right{
+    height: 300px;
+    border: solid 2px blue;
+}
+
 /* Media Queries */
 
 
