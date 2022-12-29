@@ -217,6 +217,11 @@ li{
     border: solid 2px blue;
 }
 
+.cart-image{
+    max-height: 70px;
+    max-width: 70px;
+}
+
 /* Media Queries */
 
 
