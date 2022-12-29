@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
 from .models import Product, Category
 
 # Create your views here.
@@ -8,6 +10,7 @@ def products(request, category_slug=None):
     """ A view to return products page """
     categories = None
     products = None
+    query = None
 
     if category_slug is None:
         products = Product.objects.all().filter(in_stock=True)
@@ -18,9 +21,21 @@ def products(request, category_slug=None):
                                           in_stock=True)
         product_count = products.count()
 
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request,
+                               "You did not enter any search creteria!")
+                return redirect(reverse('products'))
+
+            queries = Q(product_name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
+
     context = {
         'products': products,
         'product_count': product_count,
+        'search_term': query,
     }
     return render(request, 'products/products.html', context)
 
