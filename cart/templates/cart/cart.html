@@ -2,60 +2,74 @@
 {% load static %}
 
 {% block content %}
-<div class="container text-center">
+<div class="container text-center cart-page">
+    {% if cart_items %}
     <h1>Shopping Cart</h1>
     
     <div class="row">
         <div class="col-xs-12 col-md-8 col-lg-9 cart-left">
             <h4>Items in cart:</h4>
             <div class="row">
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
                     <h5>Image:</h5>
                 </div>
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
                     <h5>Title:</h5>
                 </div>
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-3 col-lg-3 align-self-center">
                     <h5>Item Price:</h5>
                 </div>
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
                     <h5>Quantity:</h5>
                 </div>
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-3 col-lg-3 align-self-center">
                     <h5>Line Total:</h5>
                 </div>
             </div>
             <hr>
             {% for cart_item in cart_items %}
             <div class="row">
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
                     <img src="{{ cart_item.product.image_url }}"  class="cart-image">
                 </div>
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
                     <h5>{{ cart_item.product.product_name }}</h5>
                 </div>
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-3 col-lg-3 align-self-center">
                     <h5>${{ cart_item.product.price }}</h5>
                 </div>
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
                     <h5>
-                        <a href=""><i class="fa-regular fa-square-minus"></i></a>
+                        <a href="{% url 'remove_from_cart' cart_item.product.id %}"><i class="fa-regular fa-square-minus"></i></a>
                          {{ cart_item.quantity }}
                         <a href="{% url 'add_to_cart' cart_item.product.id %}"><i class="fa-regular fa-square-plus"></i></a>
                     </h5>
                 </div>
-                <div class="col-xs-12 col-md-3 col-lg-2 align-self-center">
+                <div class="col-xs-12 col-md-3 col-lg-3 align-self-center">
                     <h5>${{ cart_item.sub_total }}</h5>
                 </div>
             </div>
             <hr>
             {% endfor %}
+            <a href="{% url 'products' %}" class="btn btn-danger continue-shopping-btn">Continue Shopping</a>
         </div>
         <div class="col-xs-12 col-md-4 col-lg-3 cart-right">
             <h4>Subtotal:</h4>
+            <hr>
+            <h6>Total: ${{ total }}</h6>
+            <h6>Delivery Cost: ${{ delivery_cost|floatformat:2 }}</h6>
+            <hr>
+            <h6><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h6>
+            <hr>
             
         </div>
     </div>
+    {% else %}
+    <h3>Your cart is empty.</h3>
+    <h4>Please add items to your cart to continue</h4>
+    <a href="{% url 'products' %}" class="btn btn-danger continue-shopping-btn">Continue Shopping</a>
+    <!--Insert image for empty cart-->
+    {% endif %}
     
 </div>
 {% endblock %}

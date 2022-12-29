@@ -209,12 +209,17 @@ li{
 /* Cart Page */
 
 .cart-left{
-    border: solid 2px red;
+    border: solid 2px #0fbdad;
+    border-radius: 15px;
 }
 
 .cart-right{
     height: 300px;
-    border: solid 2px blue;
+    border: solid 2px #0fbdad;
+    margin-left: 25px;
+    margin-right: -25px;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .cart-image{
@@ -222,6 +227,9 @@ li{
     max-width: 70px;
 }
 
+.continue-shopping-btn{
+    margin-bottom: 10px;
+}
 /* Media Queries */
 
 
