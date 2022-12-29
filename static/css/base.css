@@ -230,6 +230,11 @@ li{
 .continue-shopping-btn{
     margin-bottom: 10px;
 }
+
+.cart-title{
+    text-decoration: none;
+    color: black;
+}
 /* Media Queries */
 
 
