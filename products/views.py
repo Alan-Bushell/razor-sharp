@@ -31,6 +31,7 @@ def products(request, category_slug=None):
 
             queries = Q(product_name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
+            product_count = products.count()
 
     context = {
         'products': products,
