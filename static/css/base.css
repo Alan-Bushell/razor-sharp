@@ -235,6 +235,23 @@ li{
     text-decoration: none;
     color: black;
 }
+
+.message-container{
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.custom-toast{
+    overflow: visible;
+}
+
+.toast-capper{
+    height: 2px;
+}
+
+
 /* Media Queries */
 
 

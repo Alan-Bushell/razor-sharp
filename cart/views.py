@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from products.models import Product
 from .models import Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
@@ -21,12 +22,13 @@ def add_to_cart(request, product_id):
         cart = Cart.objects.create(
             cart_id=_cart_id(request)
         )
-    cart.save()
 
     try:
         cart_item = CartItem.objects.get(product=product, cart=cart)
         cart_item.quantity += 1
         cart_item.save()
+        messages.success(request,
+                         f'Added another {product.product_name} to your cart.')
     except CartItem.DoesNotExist:
         cart_item = CartItem.objects.create(
             product=product,
@@ -34,6 +36,8 @@ def add_to_cart(request, product_id):
             cart=cart,
         )
         cart_item.save()
+        messages.success(request,
+                         f'Added {product.product_name} to your cart.')
     return redirect('cart')
 
 
@@ -44,8 +48,12 @@ def remove_from_cart(request, product_id):
     if cart_item.quantity > 1:
         cart_item.quantity -= 1
         cart_item.save()
+        messages.success(request,
+                         f'Removed 1 {product.product_name} from your cart.')
     else:
         cart_item.delete()
+        messages.success(request,
+                         f'Removed {product.product_name} from your cart.')
     return redirect('cart')
 
 
