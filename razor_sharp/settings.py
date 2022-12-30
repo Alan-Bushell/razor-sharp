@@ -48,6 +48,9 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
 
+    # Other installs
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -61,6 +64,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'razor_sharp.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -79,6 +84,10 @@ TEMPLATES = [
                 'products.contexts.nav_menu',
                 'cart.contexts.cart_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
