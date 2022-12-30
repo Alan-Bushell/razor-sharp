@@ -36,6 +36,10 @@ body {
     color: white;
 }
 
+.fa-cart-shopping{
+    color: white;
+}
+
 button.navbar-toggler{
     border: solid 2px white !important;
     margin-left: 5px;
@@ -43,6 +47,10 @@ button.navbar-toggler{
 
 .main-logo-link {
     width: fit-content;
+}
+
+.cart-amount{
+    color: white;
 }
 
 .shop-now-button {
