@@ -16,6 +16,7 @@ def _cart_id(request):
 
 def add_to_cart(request, product_id):
     product = Product.objects.get(id=product_id)
+    redirect_url = product.get_url()
     try:
         cart = Cart.objects.get(cart_id=_cart_id(request))
     except Cart.DoesNotExist:
@@ -38,7 +39,7 @@ def add_to_cart(request, product_id):
         cart_item.save()
         messages.success(request,
                          f'Added {product.product_name} to your cart.')
-    return redirect('cart')
+    return redirect(redirect_url)
 
 
 def remove_from_cart(request, product_id):

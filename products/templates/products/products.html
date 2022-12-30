@@ -31,7 +31,10 @@
                 </div>
                 <div class="card-footer">
                     {% if product.in_stock %}
-                        <a class="btn btn-danger add-cart-btn" href="{% url 'add_to_cart' product.id %}">Add to Cart <i class="fa-solid fa-cart-arrow-down"></i></a>
+                        <a class="btn btn-danger add-cart-btn" href="{% url 'add_to_cart' product.id %}">
+                            Add to Cart
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                        </a>
                     {% else %}
                         <div class="btn btn-danger add-cart-btn disabled">Out of Stock <i class="fa-solid fa-ban"></i></i></div>
                     {% endif %}
