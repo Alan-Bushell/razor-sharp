@@ -244,6 +244,10 @@ li{
     color: black;
 }
 
+.update-link, .remove-item{
+    cursor: pointer;
+}
+
 .message-container{
     position: fixed;
     top: 72px;
