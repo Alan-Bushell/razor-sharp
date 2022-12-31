@@ -3,77 +3,82 @@
 
 {% block content %}
 <div class="container text-center cart-page">
-    {% if cart_items %}
-    <h1>Shopping Cart</h1>
-    
     <div class="row">
-        <div class="col-xs-12 col-md-8 col-lg-9 cart-left">
-            <h4>Items in cart:</h4>
-            <div class="row">
-                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
-                    <h5>Image:</h5>
+        <div class="col">
+            {% if cart_items %}
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+
+                        {% for cart_item in cart_items %}
+                            <tr>
+                                <td class="p-3 w-25">
+                                    <img class="img-fluid rounded cart-image" src="{{ cart_item.product.image_url  }}">
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0"><strong>{{ cart_item.product.name }}</strong></p>
+                                    <p class="my-0 small text-muted">SKU </p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">${{ cart_item.product.price }}</p>
+                                </td>
+                                <td class="py-3 w-25">
+                                    <p class="my-0">{{ cart_item.quantity }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">${{ cart_item.product.price }}</p>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        <tr>
+                            <td colspan="5" class="pt-5 text-right">
+                                <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                {% if free_delivery_delta > 0 %}
+                                    <p class="mb-1 text-danger">
+                                        You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                    </p>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-right">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
-                    <h5>Title:</h5>
-                </div>
-                <div class="col-xs-12 col-md-3 col-lg-3 align-self-center">
-                    <h5>Item Price:</h5>
-                </div>
-                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
-                    <h5>Quantity:</h5>
-                </div>
-                <div class="col-xs-12 col-md-3 col-lg-3 align-self-center">
-                    <h5>Line Total:</h5>
-                </div>
-            </div>
-            <hr>
-            {% for cart_item in cart_items %}
-            <div class="row">
-                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
-                    <a href="{{ cart_item.product.get_url}}">
-                        <img src="{{ cart_item.product.image_url }}"  class="cart-image">
-                    </div>
-                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
-                    <a href="{{ cart_item.product.get_url }}" class="cart-title">
-                        <h5>{{ cart_item.product.product_name }}</h5>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-3 col-lg-3 align-self-center">
-                    <h5>${{ cart_item.product.price }}</h5>
-                </div>
-                <div class="col-xs-12 col-md-2 col-lg-2 align-self-center">
-                    <h5>
-                        <a href=""><i class="fa-regular fa-square-minus"></i></a>
-                         {{ cart_item.quantity }}
-                        <a href="{% url 'add_to_cart' cart_item.product.id %}"><i class="fa-regular fa-square-plus"></i></a>
-                    </h5>
-                </div>
-                <div class="col-xs-12 col-md-3 col-lg-3 align-self-center">
-                    <h5>${{ cart_item.sub_total }}</h5>
-                </div>
-            </div>
-            <hr>
-            {% endfor %}
-            <a href="{% url 'products' %}" class="btn btn-danger continue-shopping-btn">Continue Shopping</a>
-        </div>
-        <div class="col-xs-12 col-md-4 col-lg-3 cart-right">
-            <h4>Subtotal:</h4>
-            <hr>
-            <h6>Total: ${{ total }}</h6>
-            <h6>Delivery Cost: ${{ delivery_cost|floatformat:2 }}</h6>
-            <hr>
-            <h6><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h6>
-            <hr>
-            <a href="{% url 'checkout' %}" class="btn btn-danger">Proceed to checkout</a>
-            
+            {% else %}
+                <p class="lead mb-5">Your bag is empty.</p>
+                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            {% endif %}
         </div>
     </div>
-    {% else %}
-    <h3>Your cart is empty.</h3>
-    <h4>Please add items to your cart to continue</h4>
-    <a href="{% url 'products' %}" class="btn btn-danger continue-shopping-btn">Continue Shopping</a>
-    <!--Insert image for empty cart-->
-    {% endif %}
     
 </div>
 {% endblock %}
