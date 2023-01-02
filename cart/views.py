@@ -4,13 +4,13 @@ from django.shortcuts import render, redirect, reverse, HttpResponse
 
 
 def view_cart(request):
-    """ A view that renders the bag contents page """
+    """ A view that renders the cart contents page """
 
     return render(request, 'cart/cart.html')
 
 
 def add_to_cart(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ Add a quantity of the specified product to the shopping cart """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -38,7 +38,7 @@ def add_to_cart(request, item_id):
 
 
 def adjust_cart(request, item_id):
-    """ Adjust quantity of the specified product to the shopping bag """
+    """ Adjust quantity of the specified product to the shopping cart """
 
     quantity = int(request.POST.get('quantity'))
     size = None
@@ -64,7 +64,7 @@ def adjust_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """ Adjust quantity of the specified product to the shopping bag """
+    """ Adjust quantity of the specified product to the shopping cart """
     try:
         size = None
         if 'product_size' in request.POST:
