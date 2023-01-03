@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'accounts/css/account.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col text-center">
+            </div>
+        </div>
+    </div>
+    <hr>
+{% endblock %}
+
+{% block content %}
+    <div class="container profile-container justify-content-space-around">
+        <div class="row text-center">
+            <div class="col-xs-12 col-md-4 profile-menu-items">
+                <h3>Profile Menu</h3>
+                <hr>
+                <ul class="profile-menu-list">
+                <li><a href="{% url 'accounts' %}" class="menu-item">Personal Information</a></li>
+                <li><a href="{% url 'shipping_details' %}" class="menu-item active">Shipping Details</a></li>
+                <li><a href="" class="menu-item">Order history</a></li>
+                <li><a href="" class="menu-item">Close Account</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-8 profile-options-items">
+                <h3>Address information</h3>
+                <hr>
+                <h5><strong>Street Address</strong> Street Address</h5>
+                <h5><strong>Street Address 2nd line:</strong> Street address continued</h5>  
+                <h5><strong>Town / City</strong> Town/City</h5>  
+                <h5><strong>County</strong> Conunty(optional)</h5> 
+                <h5><strong>Postcode</strong> Postcode</h5>
+                <h5><strong>Country</strong> Country</h5>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

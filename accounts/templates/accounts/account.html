@@ -8,29 +8,52 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col text-center">
+            </div>
         </div>
     </div>
+    <hr>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
+    <div class="container profile-container justify-content-space-around">
+        <div class="row text-center">
+            <div class="col-xs-12 col-md-4 profile-menu-items">
+                <h3>Profile Menu</h3>
                 <hr>
-                <h2 class="logo-font mb-4">Profile</h2>
+                <ul class="profile-menu-list">
+                <li><a href="{% url 'accounts' %}" class="menu-item active">Personal Information</a></li>
+                <li><a href="{% url 'shipping_details' %}" class="menu-item">Shipping Details</a></li>
+                <li><a href="" class="menu-item">Order history</a></li>
+                <li><a href="" class="menu-item">Close Account</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-8 profile-options-items">
+                <h3>Personal Information</h3>
                 <hr>
+                <h5><strong>First Name:</strong> {{ user.first_name }} | <strong>Last Name:</strong> {{ user.last_name }}</h5>  
+                <h5><strong>Username:</strong> {{ user.username }}</h5>  
+                <h5><strong>Account Number:</strong> 100121{{ user.id }}</h5> 
+                <h5><strong>Email:</strong> {{ user.email }}</h5>
+                <h5><strong>Phone:</strong> {{user.phone_number}}</h5>
+                <h5><strong>Date Joined:</strong> {{user.date_joined}}</h5>
             </div>
         </div>
+    </div>
 
-        
-    </div>
-    <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner">
-            <span class="icon">
-                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-            </span>
-        </h1>
-    </div>
 {% endblock %}
+
+
+<!--<div class="row">
+            
+            <div class="col-12 col-lg-6">
+                <p class="text-muted">Please see the below information</p>
+                <h3 class="heading-space"><strong>Personal Information</strong></h3>
+            <h5><strong>First Name:</strong> {{ user.first_name }} | <strong>Last Name:</strong> {{ user.last_name }}</h5>  
+            <h5><strong>Username:</strong> {{ user.username }} <a href="" aria-label="change username">Edit</a></h5>  
+            <h5><strong>Account Number:</strong> 100121{{ user.id }}</h5> 
+            <h5><strong>Email:</strong> {{ user.email }}</h5>
+            <h5><strong>Phone:</strong> {{user.phone_number}}</h5>
+            <h5 class="text-center edit-profile-link">To make changes to your profile information please click here: <a href="" aria-label="change personal information">Edit</a></h5>
+            </div>
+        </div>-->

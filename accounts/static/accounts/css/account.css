@@ -1,0 +1,22 @@
+/* Remove delivery banner on profile page*/
+#delivery-banner{
+    display: none;
+}
+
+.profile-menu-items{
+    height: 200px;
+}
+
+.profile-options-items{
+    height: 100%;
+}
+
+.profile-menu-list{
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item{
+    color: black;
+    font-size: 20px;
+}
