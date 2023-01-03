@@ -1,13 +1,36 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
-{% block content %}
-<div class="container accounts-page">
-    <div class="row">
-        <div class="col">
-            <h2>Accounts Page</h2>
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'accounts/css/account.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
         </div>
     </div>
-</div>
+{% endblock %}
 
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">Profile</h2>
+                <hr>
+            </div>
+        </div>
+
+        
+    </div>
+    <div id="loading-overlay">
+        <h1 class="text-light logo-font loading-spinner">
+            <span class="icon">
+                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+            </span>
+        </h1>
+    </div>
 {% endblock %}
