@@ -93,6 +93,8 @@
                         <div class="mb-3" id="card-element"></div>
                         <!--used for card errors with stripe-->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <!--Pass client secret to view to access pid-->
+                        <input type="hidden" value="{{ cient_secret }}" name="client_secret">
                     </fieldset>
                     <!--Submit button placeholder for now-->
                     <div class="submit-button text-right mt-5 mb-2">
