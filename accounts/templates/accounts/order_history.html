@@ -9,8 +9,6 @@
     <div class="container header-container">
         <div class="row">
             <div class="col text-center">
-                <h2 class="text-black">Accounts</h2>
-                <hr>
             </div>
         </div>
     </div>
@@ -30,18 +28,14 @@
                 </ul>
             </div>
             <div class="col-xs-12 col-md-8 profile-options-items">
-                <h3>Address information</h3>
+                <h3>Order History</h3>
                 <hr>
-                <h5><strong>Street Address:</strong> Street Address</h5>
-                <h5><strong>Street Address 2nd line:</strong> Street address continued</h5>  
-                <h5><strong>Town / City:</strong> Town/City</h5>  
-                <h5><strong>County:</strong> Conunty(optional)</h5> 
-                <h5><strong>Postcode:</strong> Postcode</h5>
-                <h5><strong>Country:</strong> Country</h5>
+                {% if user.has_order %}
+                {% else %}
+                <h5>You do not have any orders yet</h5>
+                {% endif %}
             </div>
         </div>
     </div>
 
 {% endblock %}
-
-

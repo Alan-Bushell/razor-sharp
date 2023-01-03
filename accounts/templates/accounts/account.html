@@ -12,7 +12,6 @@
             </div>
         </div>
     </div>
-    <hr>
 {% endblock %}
 
 {% block content %}
@@ -24,7 +23,7 @@
                 <ul class="profile-menu-list">
                 <li><a href="{% url 'accounts' %}" class="menu-item active">Personal Information</a></li>
                 <li><a href="{% url 'shipping_details' %}" class="menu-item">Shipping Details</a></li>
-                <li><a href="" class="menu-item">Order history</a></li>
+                <li><a href="{% url 'order_history' %}" class="menu-item">Order history</a></li>
                 <li><a href="" class="menu-item">Close Account</a></li>
                 </ul>
             </div>
