@@ -30,10 +30,9 @@
             <div class="col-xs-12 col-md-8 profile-options-items">
                 <h3>Order History</h3>
                 <hr>
-                {% if user.has_order %}
-                {% else %}
-                <h5>You do not have any orders yet</h5>
-                {% endif %}
+                {% for order in orders %}
+                {{order.order_number}}
+                {% endfor %}
             </div>
         </div>
     </div>

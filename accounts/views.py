@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from checkout.models import Order
 
 # Create your views here.
 
@@ -15,4 +16,9 @@ def shipping_details(request):
 
 def order_history(request):
     """ A view to return profile page """
-    return render(request, 'accounts/order_history.html')
+    orders = Order.objects.all()
+    template = 'accounts/order_history.html'
+    context = {
+        'orders': orders
+    }
+    return render(request, template, context)
