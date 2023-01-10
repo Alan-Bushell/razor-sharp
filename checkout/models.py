@@ -1,6 +1,7 @@
 import uuid
 from django.db import models
 from django.db.models import Sum
+from accounts.models import Account
 from django.conf import settings
 
 from django_countries.fields import CountryField
@@ -10,6 +11,7 @@ from products.models import Product
 
 
 class Order(models.Model):
+    user = models.ForeignKey(Account, on_delete=models.SET_NULL, null=True)
     order_number = models.CharField(max_length=32, null=False, editable=False)
     first_name = models.CharField(max_length=30, null=False, blank=False)
     last_name = models.CharField(max_length=70, null=False, blank=False)
@@ -32,6 +34,7 @@ class Order(models.Model):
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False,
                                   default='')
+    is_ordered = models.BooleanField(default=False)
 
     def _generate_order_number(self):
         """
