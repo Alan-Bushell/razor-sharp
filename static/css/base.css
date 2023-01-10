@@ -22,6 +22,10 @@ body {
     color: #fd473b;
 }
 
+.text-white{
+    color: white;
+}
+
 .navbar{
     padding: 0;
 }
@@ -317,8 +321,13 @@ li{
         padding: 2.5px;
     }
 
+    .navbar{
+        padding-top: 10px;
+    }
+
     .navbar-toggler{
         padding: 2.5px;
+        margin-bottom: 5px;
     }
 
     .logo-font{

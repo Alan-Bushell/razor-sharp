@@ -9,6 +9,8 @@
     <div class="container header-container">
         <div class="row">
             <div class="col text-center">
+                <h2 class="text-black">Accounts</h2>
+                <hr>
             </div>
         </div>
     </div>
@@ -27,12 +29,27 @@
                 <li><a href="" class="menu-item">Close Account</a></li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-md-8 profile-options-items">
+            <div class="col-xs-12 col-md-8 order-items">
                 <h3>Order History</h3>
                 <hr>
-                {% for order in orders %}
-                {{order.order_number}}
-                {% endfor %}
+
+                <table class="order-table">
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Amount</th>
+                    </tr>
+                    {% for order in orders %}
+                    <tr>
+                        <th>{{order.order_number|slice:":12"}}</th>
+                        <th>{{order.date|date:"dS M Y" }}</th>
+                        <th>{{order.date|date:"h:ia"}}</th>
+                        <th>{{order.grand_total}}</th>
+                    </tr>
+                    {% endfor %}
+                </table>
+                
             </div>
         </div>
     </div>
