@@ -69,3 +69,6 @@ class Account(AbstractBaseUser):
 
     def has_module_perms(self, add_label):
         return True
+
+# User profiles to go below. Once created needs to link to orders
+# Also ideal to add photos for blog and subscriptions options

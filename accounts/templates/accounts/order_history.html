@@ -40,16 +40,18 @@
                         <th>Time</th>
                         <th>Amount</th>
                     </tr>
+                    <!--This works if the user id is set to the order. Need it done automatically-->
                     {% for order in orders %}
+                    {% if order.user_id == user.id %}
                     <tr>
                         <th>{{order.order_number|slice:":12"}}</th>
                         <th>{{order.date|date:"dS M Y" }}</th>
                         <th>{{order.date|date:"h:ia"}}</th>
                         <th>{{order.grand_total}}</th>
                     </tr>
+                    {% endif %}
                     {% endfor %}
                 </table>
-                
             </div>
         </div>
     </div>
