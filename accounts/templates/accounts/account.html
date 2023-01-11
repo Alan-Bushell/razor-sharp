@@ -32,6 +32,11 @@
             <div class="col-xs-12 col-md-8 profile-options-items">
                 <h3>Personal Information</h3>
                 <hr>
+                {% if user.userprofile.profile_picture %}
+                    <img src="{{user.userprofile.profile_picture.url}}" height="100px">
+                {% else %}
+                    <img src="{% static 'images/profile.png' %}" height="100px">
+                {% endif %}
                 <h5><strong>Username:</strong> {{ user.username }}</h5>
                 <h5><strong>First Name:</strong> {{ user.first_name }} | <strong>Last Name:</strong> {{ user.last_name }}</h5>
                 <h5><strong>Account Number:</strong> 100121{{ user.id }}</h5> 

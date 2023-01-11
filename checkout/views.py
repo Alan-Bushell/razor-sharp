@@ -61,6 +61,9 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
+            user = request.user
+            order.user = user
+
             order.save()
             for item_id, item_data in cart.items():
                 try:
