@@ -17,21 +17,22 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container profile-container justify-content-space-around">
+    <div class="container-fluid profile-container justify-content-space-around">
         <div class="row text-center">
             <div class="col-xs-12 col-md-4 profile-menu-items">
                 <h3>Profile Menu</h3>
                 <hr>
                 <ul class="profile-menu-list">
-                <li><a href="{% url 'accounts' %}" class="menu-item active">Personal Information</a></li>
-                <li><a href="{% url 'shipping_details' %}" class="menu-item">Shipping Details</a></li>
-                <li><a href="{% url 'order_history' %}" class="menu-item">Order history</a></li>
-                <li><a href="" class="menu-item">Close Account</a></li>
+                <li><a href="{% url 'accounts' %}" class="menu-item active"><i class="fa-solid fa-info"></i> Personal Information</a></li><hr>
+                <li><a href="{% url 'shipping_details' %}" class="menu-item"><i class="fa-solid fa-truck-fast"></i> Shipping Details</a></li><hr>
+                <li><a href="" class="menu-item"><i class="fa-regular fa-image"></i></i> Change Profile Photo</a></li><hr>
+                <li><a href="{% url 'order_history' %}" class="menu-item"><i class="fa-solid fa-receipt"></i> Order history</a></li><hr>
+                <li><a href="" class="menu-item"><i class="fa-regular fa-circle-xmark"></i> Close Account</a></li><hr>
                 </ul>
             </div>
             <div class="col-xs-12 col-md-8 profile-options-items">
                 <h3>Personal Information</h3>
-                <hr>
+                    <hr>
                 {% if user.userprofile.profile_picture %}
                     <img src="{{user.userprofile.profile_picture.url}}" height="100px">
                 {% else %}

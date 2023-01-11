@@ -20,11 +20,11 @@ class AccountForm(ModelForm):
     first_name = forms.CharField(max_length=40)
     last_name = forms.CharField(max_length=100)
     email = forms.EmailField(required=True)
-    phone = forms.CharField(max_length=15)
+    phone_number = forms.CharField(max_length=15)
 
     class Meta:
         model = Account
-        fields = ['first_name', 'last_name', 'email', 'phone']
+        fields = ['first_name', 'last_name', 'email', 'phone_number']
 
 
 class ImageForm(ModelForm):
