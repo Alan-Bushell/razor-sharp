@@ -5,7 +5,7 @@ from checkout.models import Order
 from .models import UserProfile, Account
 from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
-from .forms import AccountForm
+from .forms import AccountForm, ImageForm
 from django.contrib import messages
 
 
@@ -34,6 +34,7 @@ def order_history(request):
 
 
 def edit_profile(request, user_id):
+    """View to allow updating user account info"""
     account = get_object_or_404(Account, id=user_id)
     form = AccountForm(instance=account)
     if request.POST:
@@ -44,6 +45,47 @@ def edit_profile(request, user_id):
                              'Your profile has been updated')
         return redirect('accounts')
     account = AccountForm(instance=account)
+    context = {
+        'form': form
+    }
+    template = 'accounts/edit_profile.html'
+    return render(request, template, context)
+
+
+def edit_image(request, user_id):
+    user = get_object_or_404(Account, id=user_id)
+    userprofile = get_object_or_404(UserProfile, user=user)
+    if request.POST:
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            userprofile.profile_picture = request.FILES['profile_picture']
+            userprofile.save()
+            form.save()
+            messages.success(request,
+                             'Your image has been updated')
+        return redirect('accounts')
+
+    user = get_object_or_404(Account, id=user_id)
+    form = ImageForm(instance=userprofile)
+    context = {
+        'form': form
+    }
+    template = 'accounts/edit_image.html'
+    return render(request, template, context)
+
+
+def edit_shipping(request, user_id):
+    """View to allow updating user shipping info"""
+    profile = get_object_or_404(UserProfile, id=user_id)
+    form = UserProfileForm(instance=profile)
+    if request.POST:
+        form = UserProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request,
+                             'Your profile has been updated')
+        return redirect('accounts')
+    profile = UserProfileForm(instance=profile)
     context = {
         'form': form
     }

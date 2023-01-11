@@ -25,7 +25,7 @@
                 <ul class="profile-menu-list">
                     <li><a href="{% url 'accounts' %}" class="menu-item active"><i class="fa-solid fa-info"></i> Personal Information</a></li><hr>
                     <li><a href="{% url 'shipping_details' %}" class="menu-item"><i class="fa-solid fa-truck-fast"></i> Shipping Details</a></li><hr>
-                    <li><a href="" class="menu-item"><i class="fa-regular fa-image"></i></i> Change Profile Photo</a></li><hr>
+                    <li><a href="{% url 'edit_image' user.id %}" class="menu-item"><i class="fa-regular fa-image"></i></i> Change Profile Photo</a></li><hr>
                     <li><a href="{% url 'order_history' %}" class="menu-item active"><i class="fa-solid fa-receipt"></i> Order history</a></li><hr>
                     <li><a href="" class="menu-item"><i class="fa-regular fa-circle-xmark"></i> Close Account</a></li><hr>
                     </ul>
