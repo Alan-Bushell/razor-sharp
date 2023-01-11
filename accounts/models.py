@@ -72,3 +72,20 @@ class Account(AbstractBaseUser):
 
 # User profiles to go below. Once created needs to link to orders
 # Also ideal to add photos for blog and subscriptions options
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(Account, on_delete=models.CASCADE)
+    street_address1 = models.CharField(blank=True, max_length=100)
+    street_address2 = models.CharField(blank=True, max_length=100)
+    town_or_city = models.CharField(blank=True, max_length=30)
+    county = models.CharField(blank=True, max_length=30)
+    postcode = models.CharField(blank=True, max_length=30)
+    country = CountryField(blank=True, max_length=30)
+    profile_picture = models.ImageField(blank=True, upload_to='userprofile')
+
+    def __str__(self):
+        return self.user.first_name
+
+    def full_address(self):
+        return f'(self.street_address1) (self.street_address2)'
