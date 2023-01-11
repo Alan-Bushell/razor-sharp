@@ -1,4 +1,4 @@
-from django.shortcuts import (render,
+from django.shortcuts import (redirect,
                               get_object_or_404,
                               render)
 from checkout.models import Order
@@ -6,6 +6,7 @@ from .models import UserProfile, Account
 from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 from .forms import AccountForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -33,20 +34,20 @@ def order_history(request):
 
 
 def edit_profile(request, user_id):
-    userprofile = get_object_or_404(UserProfile, user=user_id)
-    form = AccountForm(instance=userprofile)
+    account = get_object_or_404(Account, id=user_id)
+    form = AccountForm(instance=account)
     if request.POST:
-        form = AccountForm(request.POST, instance=userprofile)
+        form = AccountForm(request.POST, instance=account)
         if form.is_valid():
             form.save()
             messages.success(request,
                              'Your profile has been updated')
-        return redirect('profile')
-    userprofile = AccountForm(instance=userprofile)
+        return redirect('accounts')
+    account = AccountForm(instance=account)
     context = {
         'form': form
     }
-    template = 'edit_profile.html'
+    template = 'accounts/edit_profile.html'
     return render(request, template, context)
 
 

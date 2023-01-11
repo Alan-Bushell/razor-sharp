@@ -38,10 +38,11 @@
                 {% else %}
                     <img src="{% static 'images/profile.png' %}" height="100px">
                 {% endif %}
-                <form method="POST" class="personal-info-form">
-                    {{form|crispy}}
+                <form method="POST" class="userinfo-form">
+                    {% crispy form %}
+                    <a href="{% url 'edit_profile' user.id %}" class="btn btn-danger">Cancel Changes</a>
                 </form>
-                <a href="{% url 'edit_profile' user.id %}" class="btn btn-danger">Edit Profile</a>
+                
             </div>
         </div>
     </div>
