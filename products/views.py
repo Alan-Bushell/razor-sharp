@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 from .models import Product, Category
 from .forms import ProductForm
 
@@ -59,8 +60,13 @@ def product_detail(request, category_slug, product_slug):
     return render(request, template, context)
 
 
+@login_required
 def add_product(request):
+    if not request.user.is_superadmin:
+        messages.error(request, 'Sorry, that action is not permitted')
+        return redirect(reverse('home'))
     """ Add a product to the store """
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -80,7 +86,12 @@ def add_product(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_product(request, product_id):
+    if not request.user.is_superadmin:
+        messages.error(request, 'Sorry, that action is not permitted')
+        return redirect(reverse('home'))
+
     """ Edit a product """
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
@@ -104,7 +115,12 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_product(request, product_id):
+    if not request.user.is_superadmin:
+        messages.error(request, 'Sorry, that action is not permitted')
+        return redirect(reverse('home'))
+
     """Delete a product function"""
     product = get_object_or_404(Product, id=product_id)
     product.delete()

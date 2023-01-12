@@ -5,6 +5,7 @@ from checkout.models import Order
 from .models import UserProfile, Account
 from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
+from django.contrib.auth.decorators import login_required
 from .forms import AccountForm, ImageForm, AddressForm
 from django.contrib import messages
 
@@ -12,17 +13,20 @@ from django.contrib import messages
 # Create your views here.
 
 
+@login_required
 def accounts(request):
     """ A view to return profile page """
     template = 'accounts/account.html'
     return render(request, template)
 
 
+@login_required
 def shipping_details(request):
     """ A view to return profile page """
     return render(request, 'accounts/shipping_details.html')
 
 
+@login_required
 def order_history(request):
     """ A view to return profile page """
     orders = Order.objects.all()
@@ -33,6 +37,7 @@ def order_history(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_profile(request, user_id):
     """View to allow updating user account info"""
     account = get_object_or_404(Account, id=user_id)
@@ -52,6 +57,7 @@ def edit_profile(request, user_id):
     return render(request, template, context)
 
 
+@login_required
 def edit_image(request, user_id):
     user = get_object_or_404(Account, id=user_id)
     userprofile = get_object_or_404(UserProfile, user=user)
@@ -74,6 +80,7 @@ def edit_image(request, user_id):
     return render(request, template, context)
 
 
+@login_required
 def edit_shipping(request, user_id):
     """View to allow updating user shipping info"""
     profile = get_object_or_404(UserProfile, id=user_id)
@@ -93,6 +100,7 @@ def edit_shipping(request, user_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_account(request, user_id):
     """Delete users account"""
     user = get_object_or_404(Account, id=user_id)
