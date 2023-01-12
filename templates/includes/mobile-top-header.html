@@ -24,9 +24,9 @@
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center mobile-responsive">
             {% if request.user.is_authenticated %}
-                <img src="{{user.userprofile.profile_picture.url}}" class="usernav-image">
+                <div><i class="fas fa-user fa-lg"></i></div>
                 <p class="my-0 text-white">My Account</p>
-            {% else %}
+            {$ else $}
                 <div><i class="fas fa-user fa-lg"></i></div>
                 <p class="my-0 text-white">Login / Sign Up</p>
             {% endif %}

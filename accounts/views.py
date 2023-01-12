@@ -83,7 +83,7 @@ def edit_image(request, user_id):
 @login_required
 def edit_shipping(request, user_id):
     """View to allow updating user shipping info"""
-    profile = get_object_or_404(UserProfile, id=user_id)
+    profile = get_object_or_404(UserProfile, user=user_id)
     form = AddressForm(instance=profile)
     if request.POST:
         form = AddressForm(request.POST, instance=profile)
@@ -91,7 +91,7 @@ def edit_shipping(request, user_id):
             form.save()
             messages.success(request,
                              'Your profile has been updated')
-        return redirect('shipping_details')
+        return redirect('accounts')
     profile = AddressForm(instance=profile)
     context = {
         'form': form
