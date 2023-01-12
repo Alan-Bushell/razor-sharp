@@ -83,7 +83,7 @@
                                     <a href="{% url 'admin:index' %}" class="dropdown-item">Admin Panel</a>
                                 {% endif %}
                                 {% if user.is_staff %}
-                                    <a href="" class="dropdown-item">Product Management</a>
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'accounts' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
