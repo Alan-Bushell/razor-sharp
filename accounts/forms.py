@@ -45,6 +45,9 @@ class AddressForm(ModelForm):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper(self)
         self.helper.add_input(Submit('submit', 'Submit'))
+        self.fields['street_address2'].required = False
+        self.fields['county'].required = False
+        self.fields['postcode'].required = False
 
     street_address1 = forms.CharField(max_length=100)
     street_address2 = forms.CharField(max_length=100)

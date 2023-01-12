@@ -39,7 +39,7 @@
                 {% else %}
                     <img src="{% static 'images/profile.png' %}" height="100px">
                 {% endif %}
-                <form method="POST" class="userinfo-form" id="profile_picture" value="profile_picture">
+                <form method="POST" class="userinfo-form" id="profile_picture" value="profile_picture"  enctype="multipart/form-data">
                     {% crispy form %}
                     <a href="{% url 'accounts' %}" class="btn btn-danger">Cancel Changes</a>
                 </form>

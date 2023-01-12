@@ -5,7 +5,7 @@ from checkout.models import Order
 from .models import UserProfile, Account
 from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
-from .forms import AccountForm, ImageForm
+from .forms import AccountForm, ImageForm, AddressForm
 from django.contrib import messages
 
 
@@ -60,7 +60,7 @@ def edit_image(request, user_id):
         if form.is_valid():
             userprofile.profile_picture = request.FILES['profile_picture']
             userprofile.save()
-            form.save()
+            
             messages.success(request,
                              'Your image has been updated')
         return redirect('accounts')
@@ -77,15 +77,15 @@ def edit_image(request, user_id):
 def edit_shipping(request, user_id):
     """View to allow updating user shipping info"""
     profile = get_object_or_404(UserProfile, id=user_id)
-    form = UserProfileForm(instance=profile)
+    form = AddressForm(instance=profile)
     if request.POST:
-        form = UserProfileForm(request.POST, instance=profile)
+        form = AddressForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request,
                              'Your profile has been updated')
-        return redirect('accounts')
-    profile = UserProfileForm(instance=profile)
+        return redirect('shipping_details')
+    profile = AddressForm(instance=profile)
     context = {
         'form': form
     }

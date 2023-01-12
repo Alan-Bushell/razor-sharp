@@ -34,10 +34,16 @@
                 <h3>Address information</h3>
                 <hr>
                 <h5><strong>Street Address:</strong>{{user.userprofile.street_address1}}</h5>
-                <h5><strong>Street Address 2nd line:</strong>{{user.userprofile.street_address1}}</h5>  
-                <h5><strong>Town / City:</strong>{{user.userprofile.town_or_city}}</h5>  
-                <h5><strong>County:</strong>{{user.userprofile.county}}</h5> 
+                {% if user.userprofile.street_address2 %}
+                <h5><strong>Street Address 2nd line:</strong>{{user.userprofile.street_address2}}</h5>
+                {% endif %}
+                <h5><strong>Town / City:</strong>{{user.userprofile.town_or_city}}</h5>
+                {% if user.userprofile.county %}
+                <h5><strong>County:</strong>{{user.userprofile.county}}</h5>
+                {% endif %}
+                {% if user.userprofile.postcode %}
                 <h5><strong>Postcode:</strong>{{user.userprofile.postcode}}</h5>
+                {% endif %}
                 <h5><strong>Country:</strong>{{user.userprofile.country}}</h5>
                 <a href="{% url 'edit_shipping' user.id %}" class="btn btn-danger">Edit Shipping information</a>
             </div>
