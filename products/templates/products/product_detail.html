@@ -7,7 +7,12 @@
 <div class="container product-detail-container">
     <div class="row">
         <div class="col-xs-12 col-md-6 product-detail-left">
-            <img class="product-detail-image" src="{{ product.image_url }}" alt="alt added to product model">
+            {% if product.image_url %}
+                <img class="product-detail-image" src="{{ product.image_url }}" alt="{{product.product_name}}">
+            {% else %}
+                <img class="card-img-top product-image" src="{% static 'images/noimage.jpg' %}" alt="{{product.product_name}}">
+            {% endif %}
+            
         </div>
         <div class="col-xs-12 col-md-6 product-detail-right">
             <h4><strong>{{ product.product_name }}</strong></h4>
