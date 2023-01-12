@@ -54,7 +54,9 @@ def product_detail(request, category_slug, product_slug):
         'product': product,
     }
 
-    return render(request, 'products/product_detail.html', context)
+    template = 'products/product_detail.html'
+
+    return render(request, template, context)
 
 
 def add_product(request):
@@ -86,12 +88,12 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('products'))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are editing {product.name}')
+        messages.info(request, f'You are editing {product.product_name}')
 
     template = 'products/edit_product.html'
     context = {
