@@ -280,16 +280,6 @@
 
 | Test |Result  |
 |--|--|
-|Admin can add items to starters|Pass|
-|Admin can add items to mains|Pass|
-|Admin can add items to desserts|Pass|
-|Admin can edit items in starters|Pass|
-|Admin can edit items in mains|Pass|
-|Admin can edit items in desserts|Pass|
-|Admin can delete items in starters|Pass|
-|Admin can delete items in mains|Pass|
-|Admin can delete items in desserts|Pass|
-|Items they display correctly on front-end when updated / added|Pass|
 
 ---
 
