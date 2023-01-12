@@ -18,7 +18,7 @@
             <h4><strong>{{ product.product_name }}</strong></h4>
             <!--Check if product in stock-->
             {% if product.in_stock %}
-                <p class="text-muted">In Stock</p>
+                <p class="text-muted"> {% if user.is_superadmin %}{{product.stock}} {{product.product_name}}s left In Stock {% else %} In Stock{% endif %}</p>
             {% else %}
                 <p class="text-muted">Sorry this item is currently out of stock</p>
             {% endif %}
