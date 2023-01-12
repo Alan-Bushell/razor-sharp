@@ -44,6 +44,13 @@ body {
     color: white;
 }
 
+.usernav-image{
+    height: 1.9em;
+    width: 1.9em;
+    border-radius: 50%;
+    border: solid white 2px;
+}
+
 button.navbar-toggler{
     border: solid 2px white !important;
     margin-left: 5px;
