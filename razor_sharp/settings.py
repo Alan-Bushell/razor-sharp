@@ -42,11 +42,13 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django_summernote',
     'home',
     'products',
     'accounts',
     'cart',
     'checkout',
+    'blog',
 
     # Other installs
     'crispy_forms',

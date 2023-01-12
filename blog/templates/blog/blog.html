@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="text-black">The Razor Sharp Blog</h2>
+                <hr>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for post in post_list %}
+            <div class="col-xs-12 col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="Card image cap" style="height: 300px;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{post.title}}</h5>
+                            <p class="card-text">{{post.excerpt}}</p>
+                            <p class="card-text"><small class="text-muted">{{post.created_on}}</small></p>
+                            <p class="card-text"><small class="text-muted">Author: {{post.author.username}}</small></p>
+                        </div>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
