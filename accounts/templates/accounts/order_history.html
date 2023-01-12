@@ -47,7 +47,7 @@
                     {% if order.user_id == user.id %}
                     <tr>
                         <th>{{order.user.id}}</th>
-                        <th>{{order.order_number|slice:":12"}}</th>
+                        <th><a href="{% url 'order_history_details' order.order_number %}">{{order.order_number|slice:":12"}}</a></th>
                         <th>{{order.date|date:"dS M Y" }}</th>
                         <th>{{order.date|date:"h:ia"}}</th>
                         <th>{{order.grand_total}}</th>

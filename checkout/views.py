@@ -10,6 +10,7 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
 from cart.contexts import cart_contents
+from cart.models import CartItem
 
 import stripe
 import json

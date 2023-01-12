@@ -110,6 +110,23 @@ def delete_account(request, user_id):
     return redirect('home')
 
 
+def order_history_details(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'This is a past confirmation for order number {order_number}. '
+        'A confirmation email was sent on the order date.'
+    ))
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
+
+    return render(request, template, context)
+
+
 # Signal used to create user profile once user created
 @receiver(post_save, sender=Account)
 def create_user_profile(sender, instance, created, **kwargs):
