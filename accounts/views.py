@@ -60,7 +60,7 @@ def edit_image(request, user_id):
         if form.is_valid():
             userprofile.profile_picture = request.FILES['profile_picture']
             userprofile.save()
-            
+
             messages.success(request,
                              'Your image has been updated')
         return redirect('accounts')
@@ -89,8 +89,17 @@ def edit_shipping(request, user_id):
     context = {
         'form': form
     }
-    template = 'accounts/edit_profile.html'
+    template = 'accounts/edit_shipping.html'
     return render(request, template, context)
+
+
+def delete_account(request, user_id):
+    """Delete users account"""
+    user = get_object_or_404(Account, id=user_id)
+    user.delete()
+    messages.warning(request,
+                     "Your account has been closed.")
+    return redirect('home')
 
 
 # Signal used to create user profile once user created
