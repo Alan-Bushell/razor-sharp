@@ -22,7 +22,7 @@
                         {% for cart_item in cart_items %}
                             <tr>
                                 <td class="p-3 w-25">
-                                    {% if product.image_url %}
+                                    {% if cart_item.product.image_url %}
                                     <img class="img-fluid rounded cart-image" src="{{ cart_item.product.image_url  }}" alt="{{cart_item.product.product_name}}">
                                     {% else %}
                                         <img class="card-img-top product-image" src="{% static 'images/noimage.jpg' %}" alt="{{cart_item.product.product_name}}">
