@@ -44,7 +44,11 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                        <a href="{% url 'edit_product' product.id %}">Edit</a>
+                        {% if user.is_superadmin %}
+                            <a href="{% url 'edit_product' product.id %}" class="btn btn-warning mt-2">
+                                <span class="text-uppercase">Edit</span>
+                            </a>
+                        {% endif %}
                     </form>
                 </div>
             </div>
