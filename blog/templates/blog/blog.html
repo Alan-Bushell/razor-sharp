@@ -28,7 +28,7 @@
                         <a href="{% url 'post_detail' post.slug %}">
                             <h5 class="card-title">{{post.title}}</h5>
                         </a>
-                        <span><i class="fa-solid fa-heart">{{ post.number_of_likes }}</i></span>
+                        <span><i class="fa-solid fa-heart">{{ likes }}</i></span>
                             <p class="card-text">{{post.excerpt}}</p>
                         
                         <p class="card-text"><small class="text-muted">{{post.created_on}}</small></p>

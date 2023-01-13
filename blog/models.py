@@ -19,7 +19,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.BooleanField(choices=STATUS, default=0)
     likes = models.ManyToManyField(Account,
-                                   related_name='blog_likes',
+                                   related_name='blogpost_like',
                                    blank=True)
 
     class Meta:
@@ -29,7 +29,7 @@ class Post(models.Model):
         return self.title
 
     def number_of_likes(self):
-        return self.likes
+        return self.likes.count()
 
 
 class Comment(models.Model):
@@ -43,4 +43,4 @@ class Comment(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return f"Comment {self.body} by {self.user.username}"
+        return f"Comment {self.body} by {self.username.username}"
