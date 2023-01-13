@@ -31,3 +31,9 @@ def contact(request):
         'form': form
     }
     return render(request, template, context)
+
+
+def faq(request):
+    """return faq template"""
+    template = 'contact/faq.html'
+    return render(request, template)
