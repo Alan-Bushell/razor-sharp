@@ -30,3 +30,6 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', include('home.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'home.views.handle_404_error'
+handler500 = 'home.views.handle_500_error'

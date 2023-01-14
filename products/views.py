@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
@@ -101,7 +101,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('products'))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.product_name}')
@@ -126,3 +127,28 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, f"{product.product_name} has been deleted")
     return redirect(reverse('products'))
+
+
+@login_required
+def submit_review(request, product_id):
+    url = request.META.get('HTTP_REFERER')
+    if request.method == 'POST':
+        try:
+            reviews = review.objects.get(user__id=request.user.id,
+                                         product__id=product_id)
+            form = ReviewForm(request.POST, instance=reviews)
+            form.save()
+            messages.success(request, 'Thank you for your review.')
+            return redirect(url)
+        except Review.DoesNotExist:
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                data = Review()
+                data.subject = form.cleaned_data['subject']
+                data.rating = form.cleaned_data['rating']
+                data.review = form.cleaned_data['review']
+                data.product_id = product_id
+                data.user_id = request.user.id
+                data.save()
+
+        return redirect(url)

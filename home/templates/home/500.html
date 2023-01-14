@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="text-black">Ouch! That was a tough one. 500 internal Error.</h2>
+                <hr>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <!--Blog Entries-->
+            <div class="col-xs-12 col-md-4">
+                <h4>Sorry about that! It seems that the request you made is actually not possible right now.</h4>
+                <h5>To return home please click <a href="{% url 'home' %}">here</a></h5>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
