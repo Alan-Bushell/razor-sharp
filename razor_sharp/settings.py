@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'checkout',
     'blog',
     'contact',
+    'storages',
 
     # Other installs
     'crispy_forms',
@@ -181,6 +182,24 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+if 'USER_AWS' in os.environ:
+    #  AWS Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'abushell-razor-sharp'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_KEY_ID')
+    AWS_S3_CUSTOM_DOMAIN = f'{ANS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    #  Static & Media Storage
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    MEDIAFILES_LOCATION = 'static'
+
+    # Overide Static and media URLS's in prod
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
