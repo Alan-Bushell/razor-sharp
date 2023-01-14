@@ -59,6 +59,7 @@ def edit_profile(request, user_id):
 
 @login_required
 def edit_image(request, user_id):
+    """Allow user to edit image from their account"""
     user = get_object_or_404(Account, id=user_id)
     userprofile = get_object_or_404(UserProfile, user=user)
     if request.POST:
@@ -110,6 +111,7 @@ def delete_account(request, user_id):
     return redirect('home')
 
 
+@login_required
 def order_history_details(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 

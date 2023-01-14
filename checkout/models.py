@@ -11,6 +11,7 @@ from products.models import Product
 
 
 class Order(models.Model):
+    """Order Model"""
     user = models.ForeignKey(Account, on_delete=models.SET_NULL, null=True)
     order_number = models.CharField(max_length=32, null=False, editable=False)
     first_name = models.CharField(max_length=30, null=False, blank=False)
@@ -84,4 +85,5 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Title {self.product.product_name} on order {self.order.order_number}'
+        return f'Title {self.product.product_name} on order'
+        f' {self.order.order_number}'

@@ -8,6 +8,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
+    """Blog post model"""
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(Account, on_delete=models.CASCADE,
@@ -33,6 +34,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    """User comment model"""
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='comments')
     body = models.TextField()

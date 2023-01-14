@@ -8,6 +8,7 @@ from .forms import CommentForm
 
 
 class PostList(generic.ListView):
+    """Class to return the blog page with posts"""
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'blog/blog.html'
@@ -15,6 +16,7 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
+    """Class & Method to call the post details pages."""
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -36,6 +38,7 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """Method to post comments"""
 
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -67,7 +70,7 @@ class PostDetail(View):
 
 
 class PostLike(View):
-
+    """Method to like a post"""
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
 

@@ -42,6 +42,7 @@ class MyAccountManager(BaseUserManager):
 
 
 class Account(AbstractBaseUser):
+    """Base account class"""
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     username = models.CharField(max_length=50, unique=True)
@@ -56,7 +57,7 @@ class Account(AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_superadmin = models.BooleanField(default=False)
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'email'  # Change the base login to email address
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
     objects = MyAccountManager()
@@ -70,11 +71,11 @@ class Account(AbstractBaseUser):
     def has_module_perms(self, add_label):
         return True
 
-# User profiles to go below. Once created needs to link to orders
-# Also ideal to add photos for blog and subscriptions options
-
 
 class UserProfile(models.Model):
+    """User profile to extend the account profile
+    Added images so they can be displayed on the blog if users comment.
+    """
     user = models.OneToOneField(Account, on_delete=models.CASCADE)
     street_address1 = models.CharField(blank=True, max_length=100)
     street_address2 = models.CharField(blank=True, default=00, max_length=100)

@@ -8,6 +8,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
+    """Admin for actual blog posts"""
 
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
@@ -18,6 +19,7 @@ class PostAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
+    """Admin for the comments"""
     list_display = ('username', 'body', 'post', 'created_on')
     list_filter = ('created_on', 'username')
     search_fields = ('username', 'email', 'body')
