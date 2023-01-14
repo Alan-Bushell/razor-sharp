@@ -183,7 +183,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-if 'USER_AWS' in os.environ:
+if 'USE_AWS' in os.environ:
     #  AWS Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'abushell-razor-sharp'
     AWS_S3_REGION_NAME = 'eu-west-1'
