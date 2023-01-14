@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
+from django.contrib import messages
 from .forms import CommentForm
 
 # Create your views here.
@@ -50,13 +51,17 @@ class PostDetail(View):
 
         comment_form = CommentForm(data=request.POST)
 
-        if comment_form.is_valid():
+        if comment_form.is_valid():    
             comment_form.instance.username = request.user
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.success(request,
+                             'Your comment has been posted')
         else:
             comment_form = CommentForm()
+            messages.warning(request,
+                             'Something went wrong. Please Try Again')
 
         template = "blog/post_detail.html"
         context = {
