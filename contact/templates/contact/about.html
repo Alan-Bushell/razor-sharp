@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-black mt-3">Our Story</h1>
+                <hr>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container header-container">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-6 text-center">
+            <p>At Razor Sharp, we understand the importance of taking care of your appearance. That's why we started our ecommerce business - to provide men with the best grooming products and expert advice.</p>
+            <p>When we first started, we noticed a lack of information and resources available for men's grooming. We saw an opportunity to fill this gap and set out to create a one-stop destination for all your grooming needs.</p>
+            <p>We have carefully selected the best products from top brands, with a wide range of options to cater to different skin types and grooming needs. But we don't just stop at selling products. We also have a <a href="{% url 'blog' %}">blog</a> on our website where we share grooming tips and advice to help you look and feel your best.</p>
+            <p>As our business has grown, so has our team. We have brought in experts in the field of grooming to ensure that the advice and information provided on our website is accurate and up-to-date.</p>
+            <p>Our mission is to help men everywhere look and feel their best. We are passionate about grooming and are always on the lookout for new products and trends to share with our customers.</p>
+            <p>Thank you for choosing Razor Sharp for all your grooming needs. We are committed to providing you with the best products and advice to help you look and feel your best.</p>
+</div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

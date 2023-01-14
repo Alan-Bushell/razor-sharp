@@ -10,6 +10,20 @@ body {
     background-color: #0e6967;
 }
 
+a{
+    color: black;
+}
+
+li > a{
+    color: white;
+}
+
+
+a:hover{
+    cursor: pointer;
+    color: #dc3545;
+}
+
 .bg-black {
     background-color: black;
 }

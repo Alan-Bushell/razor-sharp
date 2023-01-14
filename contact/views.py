@@ -49,3 +49,9 @@ def returns(request):
     """returns template"""
     template = 'contact/returns.html'
     return render(request, template)
+
+
+def about(request):
+    """about template"""
+    template = 'contact/about.html'
+    return render(request, template)
