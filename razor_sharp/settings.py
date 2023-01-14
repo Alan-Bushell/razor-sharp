@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', ' ')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['abushell-razor-sharp.heroku.com', 'localhost']
+ALLOWED_HOSTS = ['https://abushell-razor-sharp.herokuapp.com', 'localhost']
 
 
 # Application definition
