@@ -44,6 +44,7 @@ def shipping(request):
     template = 'contact/shipping.html'
     return render(request, template)
 
+
 def returns(request):
     """returns template"""
     template = 'contact/returns.html'
