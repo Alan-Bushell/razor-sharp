@@ -1,1 +1,1 @@
-web: gunicorn razor_sharp:wsgi:application
+web: gunicorn razor_sharp.wsgi:application
