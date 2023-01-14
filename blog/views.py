@@ -51,7 +51,7 @@ class PostDetail(View):
 
         comment_form = CommentForm(data=request.POST)
 
-        if comment_form.is_valid():    
+        if comment_form.is_valid():
             comment_form.instance.username = request.user
             comment = comment_form.save(commit=False)
             comment.post = post
