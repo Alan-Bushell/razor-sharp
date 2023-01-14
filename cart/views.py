@@ -27,7 +27,8 @@ def add_to_cart(request, item_id):
             if size in cart[item_id]['items_by_size'].keys():
                 cart[item_id]['items_by_size'][size] += quantity
                 messages.success(request,
-                             f'You have added another {product_name} to your cart')
+                                 f'You have added another {product_name}'
+                                 ' to your cart')
             else:
                 cart[item_id]['items_by_size'][size] = quantity
         else:
@@ -36,11 +37,13 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
             messages.success(request,
-                             f'You have added another {product_name} to your cart')
+                             f'You have added another {product_name} '
+                             'to your cart')
         else:
             cart[item_id] = quantity
-            messages.success(request, f'You have added {product_name} to your cart')
-    
+            messages.success(request, f'You have added {product_name} '
+                             ' to your cart')
+
     request.session['cart'] = cart
     return redirect(redirect_url)
 
@@ -64,13 +67,15 @@ def adjust_cart(request, item_id):
                              f'You have removed {product_name} from your cart')
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-                messages.success(request, f'You have removed {product_name} from your cart')
+                messages.success(request, f'You have removed {product_name} '
+                                 ' from your cart')
     else:  # if no sizes run this
         if quantity > 0:
             cart[item_id] = quantity
         else:
             cart.pop(item_id)
-            messages.success(request, f'You have removed {product_name} from your cart')
+            messages.success(request, f'You have removed {product_name} '
+                             ' from your cart')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -84,17 +89,18 @@ def remove_from_cart(request, item_id):
             size = request.POST['product_size']
         cart = request.session.get('cart', {})
 
-        if size:  # If the items have sizes run this
+        if size:  # If the items have sizes
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop[item_id]
-                messages.success(request,
-                             f'You have removed {product_name} from your cart')
-        else:  # if no sizes run this
+                messages.success(request, f'You have removed {product_name} '
+                                 ' from your cart')
+        else:  # if no sizes
             cart.pop(item_id)
         product = Product.objects.get(id=item_id)
         product_name = product.product_name
-        messages.success(request, f'You have removed {product_name} from your cart')
+        messages.success(request, f'You have removed {product_name}'
+                         ' from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)

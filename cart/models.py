@@ -5,6 +5,7 @@ from products.models import Product
 
 
 class Cart(models.Model):
+    """Model for the cart itself"""
     cart_id = models.CharField(max_length=250, blank=True)
     date_added = models.DateField(auto_now_add=True)
 
@@ -13,6 +14,7 @@ class Cart(models.Model):
 
 
 class CartItem(models.Model):
+    """Model for the individual cart items"""
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     quantity = models.IntegerField()

@@ -31,7 +31,8 @@ def products(request, category_slug=None):
                                "You did not enter any search creteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(product_name__icontains=query) | Q(description__icontains=query)
+            queries = (Q(product_name__icontains=query) |
+                       Q(description__icontains=query))
             products = products.filter(queries)
             product_count = products.count()
 
@@ -74,7 +75,8 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. '
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -102,7 +104,8 @@ def edit_product(request, product_id):
             return redirect(reverse('products'))
         else:
             messages.error(request,
-                           'Failed to update product. Please ensure the form is valid.')
+                           'Failed to update product.'
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.product_name}')
