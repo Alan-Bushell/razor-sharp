@@ -37,3 +37,9 @@ def faq(request):
     """return faq template"""
     template = 'contact/faq.html'
     return render(request, template)
+
+
+def shipping(request):
+    """return faq template"""
+    template = 'contact/shipping.html'
+    return render(request, template)
