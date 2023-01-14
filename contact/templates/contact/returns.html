@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-black mt-3">Returns Policy</h1>
+                <hr>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container header-container">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-6 text-center">
+            <p>At Razor Sharp, we want you to be completely satisfied with your purchase. If for any reason you are not satisfied, we will gladly accept returns of merchandise that is unworn, unwashed, and has original tags attached, within 30 days of delivery.</p>
+            
+            <h2>Return Process</h2>
+            <ul>
+                <li>Contact our customer service team at [email/phone] to initiate a return.</li>
+                <li>Pack the item securely in the original product packaging, if possible. Please include all paperwork, parts, and accessories. All products must be returned in good condition to ensure full credit.</li>
+                <li>Before sending your return shipment, please make sure to obtain proof of mailing.</li>
+                <li>Send the return package to the following address: 123 Fake Street</li>
+            </ul>
+            
+            <h2>Refunds</h2>
+            <p>Refunds will be issued in the same payment form as tendered at the time of purchase. If payment was made by credit card, once we receive the product we will credit your account. Please allow 7-10 days for a credit to appear on your credit card statement.</p>
+            
+            <h2>Exchanges</h2>
+            <p>If you would like to exchange an item, please follow the return process outlined above and place a new order for the item you desire.</p>
+            
+            <h2>Final Sale Items</h2>
+            <p>All items marked as final sale are not eligible for return or exchange.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

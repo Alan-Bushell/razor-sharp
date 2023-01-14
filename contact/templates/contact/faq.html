@@ -19,5 +19,64 @@
 
 {% block content %}
 
+<div class="container header-container">
+    <div class="row">
+        <div class="col text-center">
+            <div id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Why is my order taking so long?
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>There can be many reasons why an order may be taking a long time. Some common reasons include:</p>
+                            <ul>
+                                <li>Backorders or stockouts of certain items in your order</li>
+                                <li>Difficulty in obtaining the necessary materials to fulfill your order
+                                <li>Delays in the shipping or delivery process 
+                                <li>High volume of orders at the time of your purchase
+                                <li>Customization of the product
+                                <li>Delays due to Covid-19 pandemics impacts in logistics.</p>
+                            </ul> 
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How do I get in touch?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                      You can contact us by filling in the contact form, emailing us or ringing us at the below contact number.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What is your returns policy?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>To see our full returns policy please click <a href="{% url 'returns' %}">here</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
