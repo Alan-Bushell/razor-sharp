@@ -6,7 +6,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import handler404, handler500
-from myapp.views import handle_404_error
+from home.views import handle_404_error
 
 urlpatterns = [
     path('admin/', admin.site.urls),
