@@ -34,7 +34,7 @@
                 <h3>Personal Information</h3>
                     <hr>
                 {% if user.userprofile.profile_picture %}
-                    <img src="{{user.userprofile.profile_picture.url}}" height="100px">
+                    <img src="{{MEDIA_URL}}{{MEDIAFILES_LOCATION}}/{{image}}" height="100px">
                 {% else %}
                     <img src="{% static 'images/profile.png' %}" height="100px">
                 {% endif %}

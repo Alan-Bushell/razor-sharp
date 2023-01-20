@@ -21,5 +21,5 @@ urlpatterns = [
     path('', include('home.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'razor_sharp.views.handler400'
+handler404 = 'razor_sharp.views.handler404'
 handler500 = 'razor_sharp.views.handler500'
