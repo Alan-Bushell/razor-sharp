@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load fixtures %}
 
 {% block content %}
 <div class="container-fluid products-page">
@@ -13,6 +14,8 @@
                 <a href="{{ product.get_url}}" class="product-image">
                     {% if product.image_url %}
                         <img class="card-img-top product-image" src="{{ product.image_url }}" alt="{{product.product_name}}">
+                    {% elif product.image %}
+                        <img class="card-img-top product-image" src="{{ product.image }}" alt="{{product.product_name}}">
                     {% else %}
                         <img class="card-img-top product-image" src="{% static 'images/noimage.jpg' %}" alt="{{product.product_name}}">
                     {% endif %}
