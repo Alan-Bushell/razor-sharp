@@ -100,7 +100,10 @@ button.navbar-toggler{
 }
 
 .hero-image{
-    background: url('/media/hero-image1.jpg') no-repeat center top fixed;
+    background: url('{{MEDIA_URL}}/media/hero-image1.jpg') no-repeat center top fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
     height: 380px;
     min-width: 100%;
 }
