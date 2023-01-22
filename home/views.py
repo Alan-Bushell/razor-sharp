@@ -14,3 +14,9 @@ def privacy(request):
     """ A view to return the privacy policy page """
 
     return render(request, 'home/privacy.html')
+
+
+def terms(request):
+    """ A view to return the terms of use page """
+
+    return render(request, 'home/terms.html')
