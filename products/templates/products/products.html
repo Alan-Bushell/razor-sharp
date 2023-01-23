@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'products/products.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="container-fluid products-page">
     <h2 class="text-center">Products Page</h2>
@@ -66,7 +70,7 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <a href="{{ product.get_url}}" class="btn btn-black rounded-0 text-uppercase mt-5">
+                                <a href="{{ product.get_url}}" class="btn btn-custom-green rounded-0 text-uppercase mt-5">
                                     <span class="text-uppercase">Product Details</span>
                                 </a>
                             </div>
