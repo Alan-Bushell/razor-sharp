@@ -1,14 +1,14 @@
 # Razor Sharp
 
-![am I responsive screenshot](static/images/readme_images/amiresponsive.png)
+![am I responsive screenshot](media/readme/amiresponsive.png)
 
 ## A Mens Grooming E-commerce Store.
-> A website that supplies some basic and high end items that men often use to keep themselves looking Razor Sharp.
+> A Men's grooming e-commerce website that provides goods for sale as well as blog content to share tips and advice.
 
 
 ### - By Alan Bushell
 
-## **[Live site]()**
+## **[Live site](https://abushell-razor-sharp.herokuapp.com/)**
 
 ---
 
