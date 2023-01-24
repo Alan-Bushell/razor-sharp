@@ -36,11 +36,33 @@
 <a name="ux"></a>
 #### Pre-project Planning
 
-> Database Structure
 
-![Lucid Diagram]()
+<details>
+<summary> Database Structure</summary>
+<br>
+
+![Lucid Diagram](media/readme/erd-preproject.png)
+</details>
 
 
+<details>
+<summary> Color Pallete </summary>
+<br>
+
+![Color Pallette](media/readme/color-pallette.png)
+</details>
+
+
+<details>
+<summary> Wireframes </summary>
+<br>
+
+![Wireframe Index](media/readme/wireframe-index.png)
+
+![Wireframe Mobile](media/readme/wireframe-mobile.png)
+
+![Wireframe Products](media/readme/wireframe-products.png)
+</details>
 
 
 ### Database Schema
@@ -103,8 +125,6 @@
 
 
 
-### Design
-
 
 ### Site User
 
@@ -147,6 +167,66 @@
 ## Features
 
 <a name="features"></a>
+
+![Navbar Desktop](media/readme/navbar-desktop.png)
+
+![Navbar Mobile](media/readme/mobile-nav.png)
+
+![Mobile Navbar Expanded](media/readme/mobile-nav-expanded.png)
+
+![Subscribe](media/readme/subscribe.png)
+
+![Footer](media/readme/footer.png)
+
+![Sign Up](media/readme/sign-up.png)
+
+![Login](media/readme/login.png)
+
+![Products Page](media/readme/products-page.png)
+
+![Products Details](media/readme/product-details.png)
+
+![Add to cart notification](media/readme/add-cart-notification.png)
+
+![Cart Page](media/readme/cart-page.png)
+
+![Checkout Page](media/readme/checkout-page.png)
+
+![Payment Success Page](media/readme/payment-success-page.png)
+
+![Accounts](media/readme/accounts-home.png)
+
+![Shipping Details](media/readme/shipping-info.png)
+
+![Change Profile Photo](media/readme/change-profile-photo.png)
+
+![Order History](media/readme/order-history.png)
+
+![Blog Page](media/readme/blog-page.png)
+
+![Blog Details](media/readme/blog-details.png)
+
+![Blog Comments](media/readme/blog-comments.png)
+
+![Shipping Policy](media/readme/shipping-policy.png)
+
+![FAQ's](media/readme/sample-faqs.png)
+
+![Contact Form](media/readme/contact-form.png)
+
+![Contact form Dropdown](media/readme/contact-form-dropdown.png)
+
+> Notifications
+
+![Sign-in Notification](media/readme/sign-in-notification.png)
+
+![Order History Notification](media/readme/order-history-notification.png)
+
+> Admin Related Options
+
+![Admin Product Permissions](media/readme/admin-product-permissions.png)
+
+![Admin Product Add Form](media/readme/admin-product-add-form.png)
 
 #### Account restrictions:
 
