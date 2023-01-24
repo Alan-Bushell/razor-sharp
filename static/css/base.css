@@ -203,6 +203,16 @@ li{
     list-style-type: none;
 }
 
+.card-image-top{
+    height: 100%;
+    width: 100%;
+}
+
+.mailchimp-logo{
+    height: 30px;
+    width: 150px;
+}
+
 /* Products Page */
 
 .product-image{
