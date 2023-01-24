@@ -34,9 +34,9 @@
                 <h3>Personal Information</h3>
                     <hr>
                 {% if user.userprofile.profile_picture %}
-                    <img src="{{user.userprofile.profile_picture.url}}" height="100px">
+                    <img src="{{user.userprofile.profile_picture.url}}" height="100px" alt="users profile image">
                 {% else %}
-                    <img src="{% static 'images/profile.png' %}" height="100px">
+                    <img src="{% static 'images/profile.png' %}" height="100px" alt="default user image">
                 {% endif %}
                 <h5><strong>Username:</strong> {{ user.username }}</h5>
                 <h5><strong>First Name:</strong> {{ user.first_name }} | <strong>Last Name:</strong> {{ user.last_name }}</h5>
