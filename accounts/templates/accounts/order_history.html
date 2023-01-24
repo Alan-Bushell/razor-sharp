@@ -36,7 +36,6 @@
 
                 <table class="order-table">
                     <tr>
-                        <th>UserID</th>
                         <th>Order Number</th>
                         <th>Date</th>
                         <th>Time</th>
@@ -46,8 +45,7 @@
                     {% for order in orders %}
                     {% if order.user_id == user.id %}
                     <tr>
-                        <th>{{order.user.id}}</th>
-                        <th><a href="{% url 'order_history_details' order.order_number %}">{{order.order_number|slice:":12"}}</a></th>
+                        <th><a href="{% url 'order_history_details' order.order_number %}" target="_blank">{{order.order_number|slice:":12"}}</a></th>
                         <th>{{order.date|date:"dS M Y" }}</th>
                         <th>{{order.date|date:"h:ia"}}</th>
                         <th>{{order.grand_total}}</th>
