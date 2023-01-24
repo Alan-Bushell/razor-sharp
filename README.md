@@ -34,16 +34,7 @@
 ## UX
 
 <a name="ux"></a>
-#### Pre-project Planning
-
-
-<details>
-<summary> Database Structure</summary>
-<br>
-
-![Lucid Diagram](media/readme/erd-preproject.png)
-</details>
-
+### Color Pallette
 
 <details>
 <summary> Color Pallete </summary>
@@ -52,6 +43,161 @@
 ![Color Pallette](media/readme/color-pallette.png)
 </details>
 
+
+### Database Schema
+
+<details>
+<summary> Database Structure</summary>
+<br>
+
+This was the suspected preproject planning database structure. As the project was being developed changes were made to the final project due to time contraints and project scope.
+
+![Lucid Diagram](media/readme/erd-preproject.png)
+</details>
+
+---
+### Accounts App
+
+#### Account Model
+| id | Field |
+|--|--|
+|first_name|CharField|
+|last_name|CharField|
+|username|CharField|
+|email|EmailField|
+|phone_number|CharField|
+|date_joined|DateTimeField|
+|last_login|DateTimeField|
+|is_admin|BooleanField|
+|is_staff|BooleanField|
+|is_active|BooleanField|
+|is_superadmin|BooleanField|
+
+---
+
+#### UserProfile Model
+
+| id | Field |
+|--|--|
+|user|OneToOneField|
+|street_address1|CharField|
+|street_address2|CharField|
+|town_or_city|CharField|
+|county|CharField|
+|postcode|CharField|
+|country|CountryField|
+|profile_picture|ImageField|
+
+
+---
+### Blog App
+
+#### Post Model
+
+| id | Field |
+|--|--|
+|title|CharField|
+|slug|SlugField|
+|author|ForeignKey|
+|updated_on|DateTimeField|
+|content|TextField|
+|featured_image|ImageField|
+|excerpt|TextField|
+|created_on|DateTimeField|
+|status|BooleanField|
+|likes|ManyToManyField|
+
+---
+
+#### Comment Model
+
+| id | Field |
+|--|--|
+|post|ForeignKey|
+|body|TextField|
+|created_on|DateTimeField|
+|username|ForeignKey|
+---
+
+### Cart App
+
+#### Cart Model
+
+| id | Field |
+|--|--|
+|cart_id|CharField|
+|date_added|DateField|
+
+---
+
+#### CartItem Model
+
+| id | Field |
+|--|--|
+|product|ForeignKey|
+|cart|ForeignKey|
+|quantity|IntegerField|
+|is_active|BooleanField|
+
+### Checkout App
+
+#### Order Model
+
+| id | Field |
+|--|--|
+|user|ForeignKey|
+|order_number|CharField|
+|first_name|CharField|
+|last_name|CharField|
+|email|EmailField|
+|phone_number|CharField|
+|country|CountryField|
+|street_address1|CharField|
+|street_address2|CharField|
+|town_or_city|CharField|
+|postcode|CharField|
+|county|CharField|
+|date|DateTimeField|
+|deliver_cost|DecimalField|
+|order_total|DecimalField|
+|grand_total|DecimalField|
+|original_cart|TextField|
+|stripe_pid|CharField|
+|is_ordered|BooleanField|
+
+---
+
+#### OrderLineItem Model
+| id | Field |
+|--|--|
+|order|ForeignKey|
+|product|ForeignKey|
+|quantity|IntegerField|
+|lineitem_total|DecimalField|
+
+
+# UX design
+
+## Overview
+
+
+
+
+### Site User
+The typical site user would be a male aged between 18 and 50 who has an interest in self care, grooming and presenting a good outward image. Additional site users could be partners of user 1 and may be browsing the site to purchase gifts for them.
+
+
+###  Goals for the website
+The goals for the website are:
+- An easy to navigate website with clear purpose
+- Provide users with products that meet their expectations
+- Allow users to view, read and comment on articles that may help or interest them.
+- To gain insights or tips on self care.
+- Allow users to checkout quickly and easily
+- To allow users to create a profile to view past orders and update profile information
+
+
+## Wireframes
 
 <details>
 <summary> Wireframes </summary>
@@ -63,81 +209,6 @@
 
 ![Wireframe Products](media/readme/wireframe-products.png)
 </details>
-
-
-### Database Schema
-
-
-
-
----
-
-#### Model
-| id | Field |
-|--|--|
-
-
-
----
-
-#### Model
-
-| id | Field |
-|--|--|
-
-
----
-
-#### Model
-
-| id | Field |
-|--|--|
-
-
----
-
-#### Model
-
-| id | Field |
-|--|--|
-|
-
----
-
-#### Model
-
-| id | Field |
-|--|--|
-
-
----
-
-#### Model
-
-| id | Field |
-|--|--|
-
-
-
-# UX design
-
-## Overview
-
-
-
-
-### Site User
-
-
-
-###  Goals for the website
-
-
-
-
-## Wireframes
-
-###  Wireframes
 
 
 
@@ -153,11 +224,11 @@
 #####  Completed User Stories
 
 
- 1. [USER STORY: Sample]()
+ 1. [USER STORY: Sample](issues/57)
 
  ##### NINTH User stories
  
- 1. [USER STORY: Sample]()
+ 1. [USER STORY: Sample](https://github.com/Alan-Bushell/razor-sharp/issues/57)
 
 
 [Back to Top of page](#contents)
@@ -168,31 +239,57 @@
 
 <a name="features"></a>
 
+<details>
+<summary> Navigation </summary>
+<br>
+
 ![Navbar Desktop](media/readme/navbar-desktop.png)
 
 ![Navbar Mobile](media/readme/mobile-nav.png)
 
 ![Mobile Navbar Expanded](media/readme/mobile-nav-expanded.png)
-
-![Subscribe](media/readme/subscribe.png)
-
+  
 ![Footer](media/readme/footer.png)
+
+</details>
+
+<details>
+<summary> Authentication </summary>
+<br>
 
 ![Sign Up](media/readme/sign-up.png)
 
 ![Login](media/readme/login.png)
 
+</details>
+
+<details>
+<summary> Products Page </summary>
+<br>
+
 ![Products Page](media/readme/products-page.png)
 
 ![Products Details](media/readme/product-details.png)
 
-![Add to cart notification](media/readme/add-cart-notification.png)
+</details>
+
+
+<details>
+<summary> Cart & Checkout Flow </summary>
+<br>
 
 ![Cart Page](media/readme/cart-page.png)
 
 ![Checkout Page](media/readme/checkout-page.png)
 
 ![Payment Success Page](media/readme/payment-success-page.png)
+
+</details>
+
+
+<details>
+<summary> Account Profiles </summary>
+<br>
 
 ![Accounts](media/readme/accounts-home.png)
 
@@ -202,57 +299,70 @@
 
 ![Order History](media/readme/order-history.png)
 
+</details>
+
+<details>
+<summary> Blog </summary>
+<br>
+
 ![Blog Page](media/readme/blog-page.png)
 
 ![Blog Details](media/readme/blog-details.png)
 
 ![Blog Comments](media/readme/blog-comments.png)
 
-![Shipping Policy](media/readme/shipping-policy.png)
+</details>
 
-![FAQ's](media/readme/sample-faqs.png)
+<details>
+<summary> Contact Page </summary>
+<br>
 
 ![Contact Form](media/readme/contact-form.png)
 
 ![Contact form Dropdown](media/readme/contact-form-dropdown.png)
 
-> Notifications
+</details>
+
+
+<details>
+<summary> Account Notifications </summary>
+<br>
 
 ![Sign-in Notification](media/readme/sign-in-notification.png)
 
 ![Order History Notification](media/readme/order-history-notification.png)
+  
+![Add to cart notification](media/readme/add-cart-notification.png)
 
-> Admin Related Options
+</details>
+
+<details>
+<summary> Admin related permissions </summary>
+<br>
 
 ![Admin Product Permissions](media/readme/admin-product-permissions.png)
 
 ![Admin Product Add Form](media/readme/admin-product-add-form.png)
 
+</details>
+
+
+<details>
+<summary> Additional Pages </summary>
+<br>
+
+![Shipping Policy](media/readme/shipping-policy.png)
+
+![FAQ's](media/readme/sample-faqs.png)
+  
+![Subscribe](media/readme/subscribe.png)
+
+</details>
+
+
 #### Account restrictions:
 
 
-#### Website features:
-
-#### Desktop
-
-> Desktop Navigation
-
-![Desktop Navigation]()
-
-
-> Mobile Navigation
-
-![Mobile Navigation]()
-
-
-> User profile
-
-![User Profile]()
-
-
-> User profile on mobile
-
-![User Mobile]()
 
 [Back to Top of page](#contents)
 
