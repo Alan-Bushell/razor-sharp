@@ -158,6 +158,10 @@ button.navbar-toggler{
     height: inherit;
 }
 
+.blog-link{
+    margin-top: 30px;
+}
+
 .div-col{
     text-align: center;
     color: white;
