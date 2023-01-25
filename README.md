@@ -165,8 +165,6 @@ This was the suspected preproject planning database structure. As the project wa
 |stripe_pid|CharField|
 |is_ordered|BooleanField|
 
----
-
 #### OrderLineItem Model
 | id | Field |
 |--|--|
@@ -175,6 +173,60 @@ This was the suspected preproject planning database structure. As the project wa
 |quantity|IntegerField|
 |lineitem_total|DecimalField|
 
+---
+
+### Contact App
+
+#### Contact Model
+
+|id|Field|
+|--|--|
+|email|EmailField|
+|subject|CharField|
+|message|TextField|
+|reason|CharField|
+
+---
+### Products App
+
+#### Categrory Model
+
+|id|Field|
+|--|--|
+|name|CharField|
+|slug|SlugField|
+|friendly_name|CharField|
+|description|TextField|
+
+#### Product Model
+
+|id|Field|
+|--|--|
+|product_name|CharField|
+|slug|SlugField|
+|description|TextField|
+|price|DecimalField|
+|stock|IntegerField|
+|in_stock|BooleanField|
+|has_sizes|BooleanField|
+|category|ForeignKey|
+|item_added|DateTimeField|
+|last_modified|DateTimeField|
+|image_url|URLField|
+|image|ImageField|
+|rating|FloatField|
+
+#### Review Model
+
+|id|Field|
+|--|--|
+|product|ForeignKey|
+|user|ForeignKey|
+|subject|CharField|
+|review|TextField|
+|rating|FloatField|
+|status|BooleanField|
+|created_at|DateTimeField|
 
 # UX design
 
