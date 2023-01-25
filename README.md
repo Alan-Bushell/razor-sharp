@@ -73,8 +73,6 @@ This was the suspected preproject planning database structure. As the project wa
 |is_active|BooleanField|
 |is_superadmin|BooleanField|
 
----
-
 #### UserProfile Model
 
 | id | Field |
@@ -88,8 +86,8 @@ This was the suspected preproject planning database structure. As the project wa
 |country|CountryField|
 |profile_picture|ImageField|
 
-
 ---
+
 ### Blog App
 
 #### Post Model
@@ -107,8 +105,6 @@ This was the suspected preproject planning database structure. As the project wa
 |status|BooleanField|
 |likes|ManyToManyField|
 
----
-
 #### Comment Model
 
 | id | Field |
@@ -117,6 +113,7 @@ This was the suspected preproject planning database structure. As the project wa
 |body|TextField|
 |created_on|DateTimeField|
 |username|ForeignKey|
+
 ---
 
 ### Cart App
@@ -128,8 +125,6 @@ This was the suspected preproject planning database structure. As the project wa
 |cart_id|CharField|
 |date_added|DateField|
 
----
-
 #### CartItem Model
 
 | id | Field |
@@ -138,6 +133,8 @@ This was the suspected preproject planning database structure. As the project wa
 |cart|ForeignKey|
 |quantity|IntegerField|
 |is_active|BooleanField|
+
+---
 
 ### Checkout App
 
