@@ -255,8 +255,6 @@ This was the suspected preproject planning database structure. As the project wa
 ## Overview
 
 
-
-
 ### Site User
 The typical site user would be a male aged between 18 and 50 who has an interest in self care, grooming and presenting a good outward image. Additional site users could be partners of user 1 and may be browsing the site to purchase gifts for them.
 
@@ -291,6 +289,13 @@ The goals for the website are:
 <a name="agile"></a>
 
 ### Agile Overview
+Once I had an initial idea of the website I was going to build I started the preplanning by creating a github projects page to track the epics, user stories and tasks required to work through for this project.
+
+It gave me an idea of how long this project was expected to take and how to manage my workload effectively.
+
+As I worked through the workload I moved tasks from not started to in progress to completed once the task was done. Occasionally I would find other work that were either new tasks or subtasks that required attention before completing a larger task.
+
+I also documented some of the bugs I have come across on this project in the projects board.
 
 
 #### User stories
