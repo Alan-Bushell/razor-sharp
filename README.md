@@ -56,7 +56,9 @@ This was the suspected preproject planning database structure. As the project wa
 </details>
 
 ---
-### Accounts App
+<details>
+<summary>Accounts App</summary>
+<br>
 
 #### Account Model
 | id | Field |
@@ -86,9 +88,13 @@ This was the suspected preproject planning database structure. As the project wa
 |country|CountryField|
 |profile_picture|ImageField|
 
+</details>
+
 ---
 
-### Blog App
+<details>
+<summary>Blog App</summary>
+<br>
 
 #### Post Model
 
@@ -114,9 +120,13 @@ This was the suspected preproject planning database structure. As the project wa
 |created_on|DateTimeField|
 |username|ForeignKey|
 
+</details>
+
 ---
 
-### Cart App
+<details>
+<summary>Cart App</summary>
+<br>
 
 #### Cart Model
 
@@ -134,9 +144,13 @@ This was the suspected preproject planning database structure. As the project wa
 |quantity|IntegerField|
 |is_active|BooleanField|
 
+</details>
+
 ---
 
-### Checkout App
+<details>
+<summary>Checkout App</summary>
+<br>
 
 #### Order Model
 
@@ -170,9 +184,13 @@ This was the suspected preproject planning database structure. As the project wa
 |quantity|IntegerField|
 |lineitem_total|DecimalField|
 
+</details>
+
 ---
 
-### Contact App
+<details>
+<summary>Contact App</summary>
+<br>
 
 #### Contact Model
 
@@ -183,8 +201,13 @@ This was the suspected preproject planning database structure. As the project wa
 |message|TextField|
 |reason|CharField|
 
+</details>
+  
 ---
-### Products App
+
+<details>
+<summary>Products App</summary>
+<br>
 
 #### Categrory Model
 
@@ -224,6 +247,8 @@ This was the suspected preproject planning database structure. As the project wa
 |rating|FloatField|
 |status|BooleanField|
 |created_at|DateTimeField|
+  
+</details>
 
 # UX design
 
