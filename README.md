@@ -320,6 +320,10 @@ To view the facebook business page you can click on the link below:
 
 In case the page becomes inactive or deactivated by Facebook I have taken screenshots to display here also:
 
+<details>
+  <summary>Facebook Business Page Screenshots</summary>
+  <br>
+
 ![FB Business page overview](media/readme/facebook-business-page.png)
 
 ![FB Business page overview](media/readme/facebook-business-page-2.png)
@@ -328,6 +332,7 @@ In case the page becomes inactive or deactivated by Facebook I have taken screen
 
 ![FB Business page overview](media/readme/facebook-business-page-4.png)
 
+</details>
 
 [Back to Top of page](#seo)
 
@@ -703,23 +708,47 @@ These would allow the business to track orders over days, months and year on yea
 
 > index.html
 
+<details>
+  <summary>Index.html Screenshot</summary>
+  <br>
+
 ![Google Lighthouse Index](media/readme/lighthouse-index-updated.png)
+  
+  </details>
 
 > profile.html
 
+<details>
+  <summary>Profile.html Screenshot</summary>
+  <br>
 ![Google Lighthouse Profile](media/readme/lighthouse-profiles.png)
+  </details
 
 ## HTML W3 Validation
 
 ### index.html
 
+<details>
+  <summary>W3 HTML Validation Screenshot</summary>
+    </br>
+
 ![W3 HTML Validation](media/readme/w3-html-validator.png)
+  
+  </details>
+  
 #### Result: No Errors
 
 ### CSS Validation
 
+<details>
+  <summary>W3 CSS Jigsaw Screenshot</summary>
+  </br>
+  
 ![w3 Jigsaw CSS checker](media/readme/w3-css-jigsaw.png)
-#### Result: 
+
+</details>
+
+#### Result: No Errors
 
 [Back to Top of page](#contents)
 
