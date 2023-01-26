@@ -286,7 +286,7 @@ The goals for the website are:
 
 ## SEO
 
-< name="seo"></a>
+<a name="seo"></a>
 
 ### SEO Project planning
 
