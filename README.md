@@ -19,16 +19,17 @@
 ## Table of contents
 <a name="contents">Back to Top</a>
  1. [ UX ](#ux)
- 2. [Agile Development](#agile)
- 3. [ Features ](#features)  
- 4. [ Features Left to Implement ](#left)  
- 5. [ Technology used ](#tech) 
- 6. [ Testing ](#testing)  
- 7. [ Bugs ](#bugs)  
- 8. [ Deployment](#deployment)
- 9. [ Credits](#credits)
- 10. [ Content](#content)  
- 11. [ Acknowledgements](#acknowledgements)  
+ 2. [ SEO ](#seo)
+ 3. [Agile Development](#agile)
+ 4. [ Features ](#features)  
+ 5. [ Features Left to Implement ](#left)  
+ 6. [ Technology used ](#tech) 
+ 7. [ Testing ](#testing)  
+ 8. [ Bugs ](#bugs)  
+ 9. [ Deployment](#deployment)
+ 10. [ Credits](#credits)
+ 11. [ Content](#content)  
+ 12. [ Acknowledgements](#acknowledgements)  
  
 
 ## UX
@@ -282,6 +283,54 @@ The goals for the website are:
 ![Wireframe Products](media/readme/wireframe-products.png)
 </details>
 
+
+## SEO
+
+< name="seo"></a>
+
+### SEO Project planning
+
+Once the business model was decided on as an a men's grooming store I started working on how to market the site and what keywords to target.
+I utilised google trends to find more popular search terms and also used a tool called SEO quake to compare the competition and see what they are doing well.
+I checked for a number of keywords on wordtracker.com and signed up for a trial to get as much out of it as possible. From there I developed a list of short tail and long tail keywords I intended to use in this project.
+
+#### Keywords
+
+Short-tail - Razor Sharp, Hand Razor, Mens Razor, Men's Grooming, Beard Care, Beard Shaping, Razor Sharp, Men's Grooming, Hair Care, Beard Care, Shaving, Hair Styling, Skin Care, Grooming products, Affordable prices, Mens grooming
+
+long-tail -  beard care gifts for men,  Shaving gifts for men,  Grooming gifts for men, hair care gifts for men, Men's Hair Care Men's Beard Care,  Razor for men, mens first razor
+
+By utilising the short tail keywords and analysing the results from google trends, and the related questions I was able to generate a list of longtail keywords.
+The keywords are used throughoutn the site at different places.
+
+I make use of the <strong>Strong</strong> tag where necessary and ensure all links are described correctly.
+
+#### Sitemap.xml
+I generated a sitemap for the site so that once ready engines like google can search it effectively.
+
+#### Robots.txt
+I generated a robots.txt file so that google could crawl the site. I have blocked off the accounts app as there is no benefit for google to crawl those pages.
+
+### Facebook Business Page
+
+To view the facebook business page you can click on the link below:
+
+[Facebook Business Page](https://www.facebook.com/profile.php?id=100089813350334)
+
+In case the page becomes inactive or deactivated by Facebook I have taken screenshots to display here also:
+
+![FB Business page overview](media/readme/facebook-business-page.png)
+
+![FB Business page overview](media/readme/facebook-business-page-2.png)
+
+![FB Business page overview](media/readme/facebook-business-page-3.png)
+
+![FB Business page overview](media/readme/facebook-business-page-4.png)
+
+
+
+
+[Back to Top of page](#seo)
 
 
 ## Agile Development
