@@ -10,7 +10,6 @@
 
 ## **[Live site](https://abushell-razor-sharp.herokuapp.com/)**
 
----
 
 ## **[Repository](https://github.com/Alan-Bushell/razor-sharp)**
 
@@ -30,7 +29,8 @@
  10. [ Credits](#credits)
  11. [ Content](#content)  
  12. [ Acknowledgements](#acknowledgements)  
- 
+
+---
 
 ## UX
 
@@ -251,16 +251,16 @@ This was the suspected preproject planning database structure. As the project wa
   
 </details>
 
-# UX design
+## UX design
 
-## Overview
+### Overview
 
 
-### Site User
+#### Site User
 The typical site user would be a male aged between 18 and 50 who has an interest in self care, grooming and presenting a good outward image. Additional site users could be partners of user 1 and may be browsing the site to purchase gifts for them.
 
 
-###  Goals for the website
+####  Goals for the website
 The goals for the website are:
 - An easy to navigate website with clear purpose
 - Provide users with products that meet their expectations
@@ -270,7 +270,7 @@ The goals for the website are:
 - To allow users to create a profile to view past orders and update profile information
 
 
-## Wireframes
+### Wireframes
 
 <details>
 <summary> Wireframes </summary>
@@ -283,8 +283,9 @@ The goals for the website are:
 ![Wireframe Products](media/readme/wireframe-products.png)
 </details>
 
+---
 
-## SEO
+# SEO
 
 <a name="seo"></a>
 
@@ -294,7 +295,7 @@ Once the business model was decided on as an a men's grooming store I started wo
 I utilised google trends to find more popular search terms and also used a tool called SEO quake to compare the competition and see what they are doing well.
 I checked for a number of keywords on wordtracker.com and signed up for a trial to get as much out of it as possible. From there I developed a list of short tail and long tail keywords I intended to use in this project.
 
-#### Keywords
+### Keywords
 
 Short-tail - Razor Sharp, Hand Razor, Mens Razor, Men's Grooming, Beard Care, Beard Shaping, Razor Sharp, Men's Grooming, Hair Care, Beard Care, Shaving, Hair Styling, Skin Care, Grooming products, Affordable prices, Mens grooming
 
@@ -305,10 +306,10 @@ The keywords are used throughoutn the site at different places.
 
 I make use of the <strong>Strong</strong> tag where necessary and ensure all links are described correctly.
 
-#### Sitemap.xml
+### Sitemap.xml
 I generated a sitemap for the site so that once ready engines like google can search it effectively.
 
-#### Robots.txt
+### Robots.txt
 I generated a robots.txt file so that google could crawl the site. I have blocked off the accounts app as there is no benefit for google to crawl those pages.
 
 ### Facebook Business Page
@@ -328,10 +329,9 @@ In case the page becomes inactive or deactivated by Facebook I have taken screen
 ![FB Business page overview](media/readme/facebook-business-page-4.png)
 
 
-
-
 [Back to Top of page](#seo)
 
+---
 
 ## Agile Development
 
@@ -631,10 +631,10 @@ These would allow the business to track orders over days, months and year on yea
  - Used to store the code for this project & for the projects Kanban board used to complete it.
 
 ### Heroku
-- Used to host and deploy this project
+ - Used to host and deploy this project
 
 ### Heroku PostgreSQL
--Heroku PostgreSQL was used as the database for this project during development and in production.
+ - Heroku PostgreSQL was used as the database for this project during development and in production.
 
 ### Git
 - Used for version control throughout the project and to ensure a good clean record of work done was maintained.
