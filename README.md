@@ -703,27 +703,22 @@ These would allow the business to track orders over days, months and year on yea
 
 > index.html
 
-
-![Google Lighthouse Index]()
+![Google Lighthouse Index](media/readme/lighthouse-index-updated.png)
 
 > profile.html
 
-
-![Google Lighthouse Profile]()
-
+![Google Lighthouse Profile](media/readme/google-lighthouse-profiles.png)
 
 ## HTML W3 Validation
 
 ### index.html
 
-
-![W3 Validation checker]()
-#### Result: 
+![W3 HTML Validation](media/readme/w3-html-validator.png)
+#### Result: No Errors
 
 ### CSS Validation
 
-
-![w3 Jigsaw CSS checker]()
+![w3 Jigsaw CSS checker](media/readme/w3-css-jigsaw.png)
 #### Result: 
 
 [Back to Top of page](#contents)
