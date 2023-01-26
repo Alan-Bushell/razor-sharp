@@ -375,11 +375,11 @@ Out of stock products do not show up to customers but in the event that the cust
   
 ![Products Page](media/readme/products-page.png)
 
+The product detail page was intended to include a reviews option for logged in users who also purchased the specific product. As you can see an option on the order model of is_ordered set as a boolean value that would be triggered on order completion and added to users profile. This functionality is not in place in this iteration of the project but will be added in the next iteration. From there the reviews rating would be calculated based on the average score of reviews.
 
 ![Products Details](media/readme/product-details.png)
 
 </details>
-
 
 <details>
 <summary> Cart & Checkout Flow </summary>
@@ -453,9 +453,15 @@ The contact form was designed to be a model that sends the message to the backen
 <summary> Account Notifications </summary>
 <br>
 
+When a user signs in or out they see a notification like the below to indicate this with the relevant action just taken.
+
 ![Sign-in Notification](media/readme/sign-in-notification.png)
 
+If a user navigates from their account profile to the below they are notified as it is reusing the same payment confirmation page once the user makes an order and pays.
+
 ![Order History Notification](media/readme/order-history-notification.png)
+
+When a user adds an item to cart they see the below notification.
   
 ![Add to cart notification](media/readme/add-cart-notification.png)
 
@@ -498,7 +504,7 @@ Initially I was considering creating a subscribe model and attaching it to the u
 
 When an unverified or not logged in user trys to access the accounts section of the site they are notified they do not have permissions and then redirected back to home.
 
-
+For the short term and to prevent spam, when a non logged in user trys to access the contact form page they are advised to login and redirected back to the home page. This was a personal choice and by design but in the next iteration I would add a "honey pot" type input that is hidden from the front end user. If this option is checked then it would be prevented from being submitted as it would show signs of spam / bot activity.
 
 
 [Back to Top of page](#contents)
@@ -515,9 +521,25 @@ My intention for this project was to implement subscriptions but due to time con
 Features including allowing users to reply directly to each other through blog articles, possible even add threads that users can generate themselves to increase and develop a community.
 I would also like to add a notification system for users to be able to see replys, likes in a bell icon from their account.
 
-####
+#### Frequently Bought Items
+In future iterations I would implement a Frequently added products section that would present itself on the initial cart page before checkout to help drive upsells.
 
+#### Product Reviews
+At present the products have a fixed rating set by the site admin which is not a true reflection of customer satisfaction. In the next iteration customers would be able to leave reviews on products they have successfully purchased once they are logged in. I will then calculate the average and return a star rating based on the float figure.
 
+#### Honey Pot spam filter for contact form
+This is a basic feature to prevent bot spam messages and while it is not 100% effective, coupled with other features it would reduce spam to close to zero. 
+This works as a hidden input value on the form that the front end user cannot click. However bots can and generally do. If the option is ticked the submitted form is either not forwarded to staff or the form is disabled completely.
+
+#### E-mail forwarding for all site actions.
+As I have a dropdown model for the contact form, depending on the size of the business I would like to forward the emails to specific email addresses monitored by different staff departments. For example the complaints emails go to the complaints teams to ensure quick responses and reduce friction.
+
+#### Order Tracking
+Going forward I would like to add an order tracking system for the user profile section. Once order placed the merchant can move the product to dispatched and add tracking that can then be viewed by the customer from within their account and also receive an email with the updates.
+
+#### Front end order tracking and accounts management for business
+This would involve creating a front end accounts page to display orders and graphs for employees of the business beyond django cms. 
+These would allow the business to track orders over days, months and year on year as well as track most popular products.
 
 [Back to Top of page](#contents)
 
@@ -528,7 +550,7 @@ I would also like to add a notification system for users to be able to see reply
 
 ### Html
 
- - Used to structure my webpages and the base templating language
+ - Used to structure my website
 
 ### CSS
 
@@ -565,9 +587,14 @@ I would also like to add a notification system for users to be able to see reply
 ### Heroku PostgreSQL
 -Heroku PostgreSQL was used as the database for this project during development and in production.
 
-
 ### Git
 - Used for version control throughout the project and to ensure a good clean record of work done was maintained.
+
+### AWS S3 and IAM
+- Used to host static and media files for this project and IAM for the permissions based roles for accessing the S3 buckets.
+
+### Django-Crispy-Forms
+- Used to style the forms in this project.
 
 [Back to Top of page](#contents)
 
