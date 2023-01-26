@@ -36,7 +36,7 @@
     {% block extra_css %}
     <!--Mailchimp Css-->
     <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet">
-    <style type="text/css">
+    <style>
         #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
     </style>
     {% endblock %}
@@ -169,7 +169,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
 
@@ -186,20 +186,20 @@
                     </ul>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <h4 class="footer-heading"><strong>Socials</strong></h4>
+                    <h5 class="footer-heading"><strong>Socials</strong></h5>
                     <ul class="socials-list">
                         <li><a href="" rel="nofollow">Twitter</a></li>
                         <li><a href="" rel="nofollow">Instagram</a></li>
                         <li><a href="" rel="nofollow">Facebook</a></li>
                     </ul>
-                    <h4 class="footer-heading"><strong>Pages</strong></h4>
+                    <h5 class="footer-heading"><strong>Pages</strong></h5>
                     <ul class="pages-list">
                         <li><a href="{% url 'products' %}">Products</a></li>
                         <li><a href="{% url 'blog' %}">Blog</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <h4 class="footer-heading"><strong>Contact</strong></h4>
+                    <h5 class="footer-heading"><strong>Contact</strong></h5>
                     <ul class="contact-list">
                         <li>Phone: 0841328436</li>
                         <li>E-mail: help@razorsharp.com</li>
