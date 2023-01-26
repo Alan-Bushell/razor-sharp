@@ -707,7 +707,7 @@ These would allow the business to track orders over days, months and year on yea
 
 > profile.html
 
-![Google Lighthouse Profile](media/readme/google-lighthouse-profiles.png)
+![Google Lighthouse Profile](media/readme/lighthouse-profiles.png)
 
 ## HTML W3 Validation
 
@@ -745,6 +745,18 @@ These would allow the business to track orders over days, months and year on yea
   
 <a name="credits"></a>
 ## Credits
+
+##### Rathan Kumar
+  - Prior to starting this project I went through Rathan's course on building a django e-commerce store and combined the knowledge learned through the code institute and rathan to implement my own creation as best as I could. 
+  - Rathan does really well to cover off correctly extending the user model through the django documentation and filled in some knowledge gaps I had. 
+
+##### Chat GPT
+  - For this project I had personally written 3-4 blog articles focusing on SEO and related to the niche of this project.
+  - However once I deployed the project my articles were lost for some reason.
+  - To save time and also to try out some AI resources I have used ChatGPT to write my blog articles. 
+  - These articles were not written by myself.
+  - I provided the title of the article and instructed the AI application to write a blog related post for a mens e-commerce store.
+  - The final articles were off and requires some tweeking to make sense and then were formatted for this site.
   
 [Back to Top of page](#contents)
 
@@ -765,6 +777,13 @@ These would allow the business to track orders over days, months and year on yea
   - Initial structure based heavily on the CI walkthrough until I got more comfortable with the framework and started to make it my own.
   - Some legacy code regarding nav remains.
 
+##### Dennis Ivy
+  - Dennis has a great video series on Youtube that covers off how to build an e-commerce platform with django from scratch.
+  - He provides good bitesize lessons that give a different perspective on building a django e-commerce store.
+
+##### Geek4Geeks
+  - Really good resource for tutorials and guides relating to all forms of programming. Really helpful for templating or sythax reference.
+
 [Back to Top of page](#contents)
 
 ---
@@ -773,4 +792,9 @@ These would allow the business to track orders over days, months and year on yea
 ## Acknowledgements
 
 ### Dick Vlandeeren
-> My mentor who provided me with constructive feedback  and guidance throughout.
+> My mentor who provided me with constructive feedback and guidance throughout.
+
+### The CI tutor support team
+> The Tutor support team in the Code Institute were always on hand to answer any queries or questions if things got too clouded.
+> I found myself needing to speak with them less and less over the course and have contacted them over 50% less than project 4 alone.
+> Regardless I do appreciate their guidance and support.
