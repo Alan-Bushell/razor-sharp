@@ -5,7 +5,7 @@
   <head>
     {% block meta %}
     <!--Required Meta Tags-->
-    <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Alan Bushell">
@@ -35,7 +35,7 @@
 
     {% block extra_css %}
     <!--Mailchimp Css-->
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet">
     <style type="text/css">
         #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
     </style>
@@ -84,7 +84,7 @@
                 <!-- last col for account and cart options-->
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-white nav-link" href="#" id="dt-user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 {% if request.user.is_authenticated %}
                                     <div><i class="fas fa-user fa-lg"></i></div>
@@ -227,7 +227,7 @@
             <div class="row">
                 <div class="col-sm-12 align-self-center">
                     <small>Created by Alan Bushell.<br> Drop by my Github or Twitter to say hi
-                        <span style="font-size: 14px;">&#128075</span></small>
+                        <span style="font-size: 14px;">&#128075;</span></small>
                 </div>
             </div>
         </div>
