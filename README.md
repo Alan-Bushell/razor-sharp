@@ -210,7 +210,7 @@ This was the suspected preproject planning database structure. As the project wa
 <summary>Products App</summary>
 <br>
 
-#### Categrory Model
+#### Category Model
 
 |id|Field|
 |--|--|
