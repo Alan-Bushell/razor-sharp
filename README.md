@@ -721,7 +721,9 @@ These would allow the business to track orders over days, months and year on yea
 <details>
   <summary>Profile.html Screenshot</summary>
   <br>
+  
 ![Google Lighthouse Profile](media/readme/lighthouse-profiles.png)
+  
   </details
 
 ## HTML W3 Validation
