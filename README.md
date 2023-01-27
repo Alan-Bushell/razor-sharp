@@ -662,29 +662,78 @@ These would allow the business to track orders over days, months and year on yea
 
 #### Manual Testing
 
->If the intended outcome completes then this will be flagged as pass. If it does not then this is a fail.
+> If the intended outcome completes then this will be flagged as pass. If it does not then this is a fail.
+
+Please see a table of acronyms used throughout testing:
+
+| Key | Value |
+|--|--|
+|NLI|Non logged in user|
+|LIU|Logged in customer who does not have staff permissions.|
+|SUP|Superuser or staff permissions
 
 
-#### Account Registration Tests
+<details>
+<summary>Account Registration Tests </summary>
+<br>
+
 | Test |Result  |
 |--|--|
+|User can create an account | Pass |
+|User can log into account| Pass|
+|User can log out of account|Pass|
+|User is notified of logging in to account|Pass|
+|User is notified of logging out of account|Pass|
 
+</details>
 
 ---
 
-#### User Navigation Tests
+<details>
+<summary>User Navigation Tests</summary>
+<br>
 
 | Test |Result  |
 |--|--|
+|User can navigate to product| Pass |
+|User can access product details| Pass|
+|User can add a product to cart|Pass|
+|User can navigate back to products|Pass|
+|User can add additional products to cart|Pass|
+|User can add multiple quantities of a product |Pass|
+|User can navigate to cart|Pass|
+|Logged in User can navigate to the profile section of accounts|Pass|
+|User can access their saved address information|Pass|
+|User can access past orders|Pass|
+|User can access the blog section of the page|Pass|
+|User can access specific blogs|Pass|
+|User can access the contact page and form|Pass|
+|All links on footer open to correct pages|Pass|
+|All links on Heading Navigation open to correct option|Pass|
 
+</details>
 
 ---
 
-#### Account Security Tests
+<details>
+<summary>Account Security Tests</summary>
+<br>
 
 | Test |Result  |
 |--|--|
+|NLI cannot make reservation | Pass |
+|NLI cannot access profile page| Pass|
+|NLI cannot access admin panel|Pass|
+|NLI cannot access products management|Pass|
+|NLI cannot access the contact form page|Pass|
+|NLI cannot leave comments on blog|Pass|
+|LIU cannot access admin panel|Pass|
+|LIU cannot access products management|Pass|
+|LIU can access the contact form page|Pass|
+|LIU cannot edit products|Pass|
+|LIU can leave comments on blog articles|Pass|
 
+</details>
 
 --- 
 
