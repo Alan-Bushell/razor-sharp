@@ -78,11 +78,7 @@
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
-                    {% if user.userprofile.profile_picture %}
-                        <img src="{{comment.username.userprofile.profile_picture.url}}" height="100px" alt="users profile image" class="comment-photo">
-                    {% else %}
-                        <img src="{% static 'images/profile.png' %}" height="100px" alt="default user image">
-                    {% endif %}
+                    <img src="{{comment.username.userprofile.profile_picture.url}}" class="comment-photo">
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ comment.username.username }} wrote:
