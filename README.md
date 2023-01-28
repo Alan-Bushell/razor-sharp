@@ -769,12 +769,23 @@ Please see a table of acronyms used throughout testing:
 
 </details>
 
+---
 
-
-#### Admin Tests
+<details>
+<summary>Admin Tests</summary>
+<br>
 
 | Test |Result  |
 |--|--|
+|SUP can access admin panel from the my account dropdown | Pass |
+|SUP can access add product page from my account dropdown|Pass|
+|SUP can see the edit product option on the products page|Pass|
+|SUP can see the delete option on the products page|Pass|
+|SUP can write blogs from the admin panel and publish them|Pass|
+|SUP can edit products and update all fields successfully|Pass|
+|SUP can delete products from the products page|Pass|
+
+</details>
 
 ---
 
