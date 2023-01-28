@@ -926,8 +926,136 @@ Please see a table of acronyms used throughout testing:
 <a name="deployment"></a>
 ## Deployment
 
+### Deployment to Heroku
 
-#### Forking the repository
+This application is deployed with Heroku.
+
+<details>
+  <summary>The steps for deploying through Heroku are as follows:</summary>
+  <br>
+
+1.  Visit Heroku and login
+2.  Click on New and then choose New App.
+3.  Choose a name for your app and then choose your region.
+4. Ideally select the region closest to you
+5.  Then press 'Create app'.
+  
+</details>
+
+
+<details>
+  <summary>To attach The Database:</summary>
+  <br>
+
+1. Login or sign up to  [ElephantSQL](https://www.elephantsql.com/).
+2. Press create a new instance.
+3. Choose a name and plan. Then click on select region. 
+4. Select the closest Data Center to you
+5. Click on "Create Instance".
+6.  Go back to the start page and click on your new database.
+7.  Copy the URL for the database.
+  
+ </details>
+
+
+Go back to Heroku and click on the settings tab of your application.
+    
+Click on "Reveal config vars".
+
+Add a new config var named DATABASE_URL and paste in the URL from  ElephantSQL  as the value.
+
+Go back to Gitpod or the IDE you are using and install two more requirements for the database:
+
+  `pip3 install dj_databse_url`
+  `pip3 install psycopg2-binary`
+  
+Update your requirements.txt file by typing in  `pip3 freeze --local > requirements.txt`
+
+Add the DATABASE_URL to your env.py file or environment variables in gitpod.
+
+Go to settings.py and  `import dj_database_url`
+
+Comment out the default  `DATABASES`  setting.
+
+Add this under the commented out section:
+
+``` DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')) }
+
+```
+Run migrations for the new database.
+
+1.  In the root directory of your project, create a file called "Procfile" and add  `web: gunicorn project_name.wsgi`  so Heroku will know what kind of application it is.
+    
+2.  In settings.py add ['app_name.heroku.com', 'localhost'] to  `ALLOWED_HOSTS`.
+    
+3.  Commit and push these changes to GitHub.
+    
+4.  In the Heroku settings tab of your project update the config vars to the following:
+
+| Key | Value  |
+| -- | -- |
+|AWS_ACCESS_KEY_ID|From AWS in CSV Download|
+|AWS_SECRET_ACCESS_KEY|From AWS in CSV Download|
+|DATABASE_URL|From ElephantSQL dashboard|
+|EMAIL_HOST_PASSWORD|App Password from Email Client|
+|EMAIL_HOST_USER|Email address|
+|SECRET_KEY|Randomly Generated Django Key|
+|STRIPE_PUBLIC_KEY|Publishable key from Stripe Dashboard|
+|STRIPE_SECRET_KEY|Secret key from Stripe Dashboard|
+|STRIPE_WH_SECRET|Signing secret from Stripe Webhooks Endpoint|
+|USE_AWS|True|
+
+If you deploy at the beginning of the project then add the key value of: `DISABLE_COLLCETSTATIC`  and set it to 1. When you have  staticfiles to push then remove this variable.
+
+Once the project is completed and you are no longer working on it set  `DEBUG`  =  `False`  in settings.py.
+
+Log in to Heroku and select the deploy tab on your Heroku App and connect your GitHub account.
+
+Search for your repository and connect it.
+
+Once you have selected the correct repository, scroll down and click "Deploy Branch".
+
+Watch the log as it deploys your project and ensure there are no errors.
+
+If everything is correct it should deploy successfully.
+
+Click on open app at the top of the page to view your deployed app.
+
+---
+
+### Clone project
+
+<details>
+  <summary>How to clone of the repository:</summary>
+  <br>
+
+1.  Click on the code tab under the repository name.
+2.  Then click on "Code" button to the right above the files listed.
+3.  Click on the clipboard icon to copy the URL.
+4.  Open Git Bash in gitpod or your preferred IDE.
+5.  Change the working directory to where you want your cloned directory.
+6.  Type  `git clone`  and then paste the URL that you copied.
+7.  Press enter and clone is complete.
+8.  In the terminal install the requirements by using the following: pip3 install -r requirements.txt
+9. Next create the env.py file which tells our project which variables to use.  
+10. Add the file to a .gitignore to prevent it from being pushed to github
+11. Make migrations by running :  `python manage.py makemigrations`
+12. Then migrate those changes with  `python manage.py migrate`
+13. To run the project type  `python manage.py runserver` into the terminal and open port 8000.
+14. This will open the project locally for you to work on.
+  
+  </details>
+
+---
+
+#### Forking the repository on GitHub
+
+The steps to fork this repository are:
+
+ 1. Login to github and find the respitory  [here](https://github.com/Alan-Bushell/razor-sharp)
+ 2. Under your profile photo on the right hand side you will see the fork button.
+ 3. Click the fork button and github will create a copy to your account.
 
 
 [Back to Top of page](#contents)
