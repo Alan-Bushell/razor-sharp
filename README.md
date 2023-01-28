@@ -18,17 +18,18 @@
 ## Table of contents
 <a name="contents">Back to Top</a>
  1. [ UX ](#ux)
- 2. [ SEO ](#seo)
- 3. [Agile Development](#agile)
- 4. [ Features ](#features)  
- 5. [ Features Left to Implement ](#left)  
- 6. [ Technology used ](#tech) 
- 7. [ Testing ](#testing)  
- 8. [ Bugs ](#bugs)  
- 9. [ Deployment](#deployment)
- 10. [ Credits](#credits)
- 11. [ Content](#content)  
- 12. [ Acknowledgements](#acknowledgements)  
+ 2. [ Business Model ](#biz)
+ 3. [ SEO ](#seo)
+ 4. [Agile Development](#agile)
+ 5. [ Features ](#features)  
+ 6. [ Features Left to Implement ](#left)  
+ 7. [ Technology used ](#tech) 
+ 8. [ Testing ](#testing)  
+ 9. [ Bugs ](#bugs)  
+ 10. [ Deployment](#deployment)
+ 11. [ Credits](#credits)
+ 12. [ Content](#content)  
+ 13. [ Acknowledgements](#acknowledgements)  
 
 ---
 
@@ -253,23 +254,6 @@ This was the suspected preproject planning database structure. As the project wa
 
 ## UX design
 
-### Overview
-
-
-#### Site User
-The typical site user would be a male aged between 18 and 50 who has an interest in self care, grooming and presenting a good outward image. Additional site users could be partners of user 1 and may be browsing the site to purchase gifts for them.
-
-
-####  Goals for the website
-The goals for the website are:
-- An easy to navigate website with clear purpose
-- Provide users with products that meet their expectations
-- Allow users to view, read and comment on articles that may help or interest them.
-- To gain insights or tips on self care.
-- Allow users to checkout quickly and easily
-- To allow users to create a profile to view past orders and update profile information
-
-
 ### Wireframes
 
 <details>
@@ -282,6 +266,62 @@ The goals for the website are:
 
 ![Wireframe Products](media/readme/wireframe-products.png)
 </details>
+
+[Back to Top of page](#contents)
+
+---
+
+# Business Model
+
+<a name="biz"></a>
+
+#### Business Overview
+
+The business is a B2C e-commerce platform whose goal is to provide tangible products to it's customers through an online store.
+
+The types of products would be relatively low cost men's grooming products with low ($9.99) to medium($49.99) pricing.
+
+The benefits for the business owner are:
+
+1. Easy to scale the business as it grows
+2. No need to set up a physical location
+3. Can cater to customers globally
+4. Can target a specific niche and try to build a brand that resonates with its target audience.
+5. Relatively low cost in starting up which allows for a larger portion of the budget to be used for customer aquisition. ie Ads / marketing
+6. Low price point would encourage impulse buying from customers who may be considering purchasing from the business.
+
+
+The cons of this business model are:
+
+1. Getting customers initally can be difficult due to saturation in certain industrys
+2. Establishing a brand from the ground up takes time and immediate results are unlikely without a sound marketing strategy.
+3. Getting customers organically takes time so the business would need to manually market the business or use paid advertising.
+4. Not having a physical business can make it harder to build trust and loyalty with customers without offering discounts and offers.
+5. As the price point fo the items is lower, the business would need to process a reasonable number of orders per day / week / month for the business to be viable.
+
+Taking the pros and cons of this business, a subscription model seems to be an unlikely viable model as it requires a customer base and some form of brand loyalty.
+
+The best approach would be to provide products on a pay as you go traditional e-commerce format. As the business grows then the implementation of a subscription model would make more sense.
+
+---
+
+#### Site User
+User 1: The typical site user would be a male aged between 18 and 50 who has an interest in self care, grooming and presenting a good outward image. 
+
+User 2: Additional site users could be partners of user 1 and may be browsing the site to purchase gifts for them.
+
+---
+
+####  Goals for the website
+The goals for the website are:
+- An easy to navigate website with clear purpose
+- Provide users with products that meet their expectations
+- Allow users to view, read and comment on articles that may help or interest them.
+- To provide users with insights or tips on self care through helpful articles to build brand trust and loyalty.
+- Allow users to checkout quickly and easily
+- To allow users to create a profile to view past orders and update profile information
+
+[Back to Top of page](#contents)
 
 ---
 
@@ -334,7 +374,7 @@ In case the page becomes inactive or deactivated by Facebook I have taken screen
 
 </details>
 
-[Back to Top of page](#seo)
+[Back to Top of page](#contents)
 
 ---
 
@@ -1093,6 +1133,12 @@ The steps to fork this repository are:
   
 ##### W3 Schools
   - Used for reference throughout for simple css examples.
+
+##### Canva
+  - Used to create the logo used for the facebook business page and favicon
+
+##### Favicon.ico
+  - Used to create the favicon from the logo
   
 ##### Code Institute
   - Course content for portfolio project 5 helped greatly in being able to complete this project.
@@ -1121,3 +1167,5 @@ The steps to fork this repository are:
 > The Tutor support team in the Code Institute were always on hand to answer any queries or questions if things got too clouded.
 > I found myself needing to speak with them less and less over the course and have contacted them over 50% less than project 4 alone.
 > Regardless I do appreciate their guidance and support.
+
+[Back to Top of page](#contents)
