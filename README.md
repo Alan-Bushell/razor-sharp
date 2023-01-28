@@ -789,6 +789,26 @@ Please see a table of acronyms used throughout testing:
 
 ---
 
+<details>
+<summary>Site wide tests</summary>
+<br>
+
+| Test |Result  |
+|--|--|
+|NLI cannot access contact page| Pass |
+|LIU can submit contact form to business|Pass|
+|SUP can view submitted forms from the admin panel|Pass|
+|LIU receives notification the form has been submitted|Pass|
+|User can navigate to privacy policy|Pass|
+|User can navigate to shipping policy|Pass|
+|User can navigate to terms of use page|Pass|
+|Social links open up to the correct pages|Pass|
+|Social links open up in a new tab|Pass|
+
+</details>
+
+---
+
 ## Google Lighthouse Testing
 
 ### Desktop
