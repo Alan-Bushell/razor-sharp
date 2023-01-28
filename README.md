@@ -737,10 +737,37 @@ Please see a table of acronyms used throughout testing:
 
 --- 
 
-#### Profile Tests
+<details>
+<summary>Profile Tests</summary>
+<br>
 
-| Test |Result  |
+| Test |Result|
 |--|--|
+|NLI cannot access profile page | Pass |
+|LIU can access profile page|Pass|
+|LIU can see their details on the accounts home page|Pass|
+|LIU can update their first name|Pass|
+|LIU can update their last name|Pass|
+|LIU can update their email|Pass|
+|LIU can update their phone number|Pass|
+|LIU can navigate to their shipping information|Pass|
+|LIU can update street address 1 and 2|Pass|
+|LIU can update town or city|Pass|
+|LIU can update county|Pass|
+|LIU can update postcode|Pass|
+|LIU can update country|Pass|
+|LIU can navigate to change profile image page|Pass|
+|LIU who does not have a personal image has the default image|Pass|
+|LIU can add an image to their profile|Pass|
+|LIU can change their profile image once they have one set |Pass|
+|LIU can remove a personal image entirely |Pass|
+|LIU can select delete account|Pass|
+| Pop-up modal prompts the user to confirm account deletion before closing account |Pass|
+|LIU can close account successfully |Pass|
+|When user closes their account they are redirected to the home page|Pass|
+|When user closes account they receive a pop up notification advising them the account is closed|Pass|
+
+</details>
 
 
 
