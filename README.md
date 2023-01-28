@@ -828,6 +828,23 @@ Please see a table of acronyms used throughout testing:
 
 ---
 
+<details>
+<summary>Blog Tests</summary>
+<br>
+
+| Test |Result  |
+|--|--|
+|NLI can access blog pages| Pass |
+|NLI cannot post a comment on blog posts|Pass|
+|LIU can comment on blog posts|Pass|
+|LIU can like blog posts|Pass|
+|LIU's information shows in the comment section after they post comment|Pass|
+|LIU's correct profile image shows on the comment they made|Pass|
+  
+</details>
+
+---
+
 ## Google Lighthouse Testing
 
 ### Desktop
@@ -885,6 +902,23 @@ Please see a table of acronyms used throughout testing:
 <a name="bugs"></a>
 ## **Bugs**
 
+<details>
+<summary>Bugs</summary>
+<br>
+
+> Please click on the bugs below to see causes, solutions or reason why issue is not resolved
+
+| Bug |Outcome  |
+|--|--|
+|[User getting 404 when trying to change address](https://github.com/Alan-Bushell/razor-sharp/issues/56)| Resolved |
+|[Incorrect logo showing on mobile](https://github.com/Alan-Bushell/razor-sharp/issues/58)| Resolved |
+|[My account not showing on mobile](https://github.com/Alan-Bushell/razor-sharp/issues/59)|Resolved|
+|[Profile image in navbar causing errors for new users](https://github.com/Alan-Bushell/razor-sharp/issues/57)|Not Resolved|
+|[Emails not sending in deployment](https://github.com/Alan-Bushell/razor-sharp/issues/62)|Not Resolved|
+
+</details>
+
+
 [Back to Top of page](#contents)
 
 ---
@@ -914,6 +948,10 @@ Please see a table of acronyms used throughout testing:
   - These articles were not written by myself.
   - I provided the title of the article and instructed the AI application to write a blog related post for a mens e-commerce store.
   - The final articles were off and requires some tweeking to make sense and then were formatted for this site.
+
+##### Remove.bg
+  - Used remove.bg to remove the background on the amiresponsive.png as i felt the original black background didn't work with the readme layout.
+  - The new image fits in nicely and is more aestetically pleasing for readers.
   
 [Back to Top of page](#contents)
 
