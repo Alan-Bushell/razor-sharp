@@ -321,6 +321,20 @@ The goals for the website are:
 - Allow users to checkout quickly and easily
 - To allow users to create a profile to view past orders and update profile information
 
+---
+
+#### Marketing Strategy
+The businesses marketing strategy going forward is:
+
+1. Promote the store through it's facebook business page. This can be viewed in the SEO section.
+2. Share the page with friends and family and ask them to like it and share the pafe to their wider circle.
+3. Have a soft online launce sale to encourage early adoption and purchases from prospective clients
+4. Gain subscribers through the mailchimp option on the site and then send out offers and promotions to encourage repeat business
+5. Write meaningful and helpful articles / blog posts to help with SEO ranking in search engines like google.
+6. Potentially use paid advertisement like google ads, facebook ads to promote to our target demographic.
+7. Set up multiple ads with a different product as the cover image, track the click through rate and stick with the high peformers.
+8. Depending on budget the business may look at promoting it's custom made products to influencers in the brands niche, offering complimentary goods or a small fee for a shout out  or review. Ideally targetting low to medium influencers with a following of at least 10k in target niche. This would be realistic with a low budget for the business starting off and can start pushing traffic towards the site. 
+
 [Back to Top of page](#contents)
 
 ---
