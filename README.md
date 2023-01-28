@@ -680,10 +680,11 @@ Please see a table of acronyms used throughout testing:
 | Test |Result  |
 |--|--|
 |User can create an account | Pass |
-|User can log into account| Pass|
+|Verified User can log into account| Pass|
 |User can log out of account|Pass|
 |User is notified of logging in to account|Pass|
 |User is notified of logging out of account|Pass|
+|User receives email verification email|Fail|
 
 </details>
 
@@ -804,6 +805,24 @@ Please see a table of acronyms used throughout testing:
 |User can navigate to terms of use page|Pass|
 |Social links open up to the correct pages|Pass|
 |Social links open up in a new tab|Pass|
+
+</details>
+
+---
+
+<details>
+<summary>Payment Tests</summary>
+<br>
+
+| Test |Result  |
+|--|--|
+|NLI can successfully make a payment & order| Pass |
+|LIU can successfully make a payment & order| Pass|
+|All users receive an email confirmation of order on deployed site|Fail|
+|In development email confirmation is printed to terminal|Pass|
+|If payment is successful user will be redirected to order success page|Pass|
+|If order fails due to incorrect information being submitted order will not be submitted|Pass|
+|If there is an error when processing the order the site returns a 500 error without processing order|Pass|
 
 </details>
 
