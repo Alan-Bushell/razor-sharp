@@ -8,10 +8,7 @@
 
 ### - By Alan Bushell
 
-## **[Live site](https://abushell-razor-sharp.herokuapp.com/)**
-
-
-## **[Repository](https://github.com/Alan-Bushell/razor-sharp)**
+## **[Live site](https://abushell-razor-sharp.herokuapp.com/)    |    [Repository](https://github.com/Alan-Bushell/razor-sharp)**
 
 ---
   
@@ -365,6 +362,13 @@ I generated a sitemap for the site so that once ready engines like google can se
 
 ### Robots.txt
 I generated a robots.txt file so that google could crawl the site. I have blocked off the accounts app as there is no benefit for google to crawl those pages.
+
+### Logo
+For the favicon and logo for facebook I needed to manually create a logo to fit the theme of the store.
+
+I created a custom logo in Canva. This logo was created using the base color scheme and includes a razor blade with the name of the store across it horizontally.
+
+This logo can be seen in the favicon of the site and on the facebook screenshots below from the business page.
 
 ### Facebook Business Page
 
